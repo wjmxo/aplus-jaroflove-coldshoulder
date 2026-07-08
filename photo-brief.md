@@ -44,16 +44,16 @@ Use these briefs for real photography or AI image generation. Do not use referen
 
 ## Image 06 - Size And Measurement Guide (Module 06)
 - Use size: optional 1464 x 600 support image for a Premium Background Image with Text, or smaller crop inside a technical specification module.
-- Scene: straight-on model wearing the Henley with subtle measurement callout room for Bust, Length, and Sleeve; optional flat garment measurement shot.
+- Scene: straight-on model wearing the Henley with subtle measurement callout room for Bust and Length; optional flat garment measurement shot.
 - Lighting: neutral studio lighting, accurate product shape, minimal pose distortion.
 - Props and styling: fitted jeans, plain background, arms relaxed enough to see sleeve length.
-- AI prompt (English): Women's apparel size guide photo, front-facing model wearing a long sleeve Henley V neck slim fit ribbed top with denim jeans, neutral oatmeal studio background, relaxed posture, garment shape clear for bust length and sleeve measurement callouts, realistic ribbed texture, soft even lighting, no text, no logos, no watermark --ar 61:25
+- AI prompt (English): Women's apparel size guide photo, front-facing model wearing a long sleeve Henley V neck slim fit ribbed top with denim jeans, neutral oatmeal studio background, relaxed posture, garment shape clear for bust and length measurement callouts, realistic ribbed texture, soft even lighting, no text, no logos, no watermark --ar 61:25
 - Real shoot note: do not use wide-angle distortion; photograph at chest height or slightly above waist height.
 
-## Image 07 - Brand Matrix Product Thumbnails (Module 07)
-- Use size: 200 x 225 or 300 x 225 product cards depending on final Premium Comparison Table selection.
-- Scene: consistent product or model thumbnails for the Henley and related ELARAISE tops.
-- Lighting: identical warm neutral background across all items.
-- Props and styling: use front-facing model or clean garment images; keep crop position consistent.
-- AI prompt (English): Consistent women's apparel product thumbnails for a brand comparison table, fitted long sleeve Henley ribbed top and related everyday tops, warm oatmeal background, front-facing model crop, clean catalog lighting, neutral denim styling, cohesive color palette, no text, no logos, no watermark --ar 4:3
-- Real shoot note: related products must be actual ELARAISE items selected by the seller before final design production.
+## Image 07 - Brand Story And Color Display (Module 07)
+- Use size: 1464 x 600 horizontal. Keep the brand statement area clean and show five color options as product thumbnails or swatches.
+- Scene: ELARAISE brand closing image with the Henley as the only product focus, showing White, Red, Wine, Brown, and Black.
+- Lighting: warm neutral studio lighting, consistent across all color views.
+- Props and styling: logo, simple fabric swatches, optional front-facing product thumbnails; avoid adding unrelated products.
+- AI prompt (English): Premium women's apparel brand story closing image, ELARAISE inspired warm oatmeal background, one long sleeve Henley V neck slim fit ribbed top shown through five color options white red wine brown black, clean color swatches and elegant serif fashion layout, soft natural studio light, polished casual everyday style, no extra products, no text, no logos, no watermark --ar 61:25
+- Real shoot note: use real product color images when available; if not, use accurate color swatches only.
