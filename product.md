@@ -38,7 +38,21 @@
 - 差异化机会: 竞品价位 $19.99–24.99,本品 $9.99 起——A+ 不能提价格,
   但可通过"车缝工艺特写、面料成分诚实标注"传达同等质感,让性价比在对比中自然成立
 
-## 品牌信息(待补充)
-- 品牌色 HEX: 【待用户确认,建议从 Logo 或主图提取】
-- 品牌 Slogan: 【待用户确认】
-- Logo 文件: 待放入 assets/
+## 品牌信息(已确定)
+- **品牌 Slogan**: ELARAISE --- Effortless Essentials(可根据喜好调整)
+- **Logo**: 见 assets/ 目录,提供 4 个文件
+  - `logo.svg` / `logo.png` — 深酒红主色版,用于浅色背景
+  - `logo-white.svg` / `logo-white.png` — 白色版,用于照片或深色背景
+  - 形式为衬线字母标(Wordmark)+ 细线 + Slogan 小字,与 STYLE.md 的衬线标题体系一致
+
+### 品牌色 Tokens(与 STYLE.md 配色兼容,已按产品5色系定制)
+```css
+--brand-primary: #5E2A35;   /* 深酒红:取自 Wine 色变体,秋冬调性,区别于ANRABESS的驼棕 */
+--brand-accent:  #B08D6E;   /* 暖驼:分隔线、小标签、手写体点缀 */
+--brand-bg:      #F4F2EE;   /* 暖米白底:与 STYLE.md 主背景一致 */
+--brand-text:    #1F1B1A;   /* 近黑标题 */
+--brand-muted:   #8A8378;   /* 灰褐正文辅助色 */
+```
+- 选色逻辑: Wine 是产品5色中最具品牌记忆点的颜色,深酒红做主色让"品牌色=产品色"形成呼应;
+  底色和辅助色沿用 ANRABESS 验证过的暖米白体系,保证成图与参考风格同源
+- 使用规则: 主色只用于 Logo、小标签、色带和强调词,不做大面积底色(遵守 STYLE.md 浅底原则)
