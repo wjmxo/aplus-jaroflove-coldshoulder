@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=1464, initial-scale=1">
+  <title>Module 06 - Size Chart</title>
+  <style>
+    :root {
+      --brand-primary: #5E2A35;
+      --brand-accent: #B08D6E;
+      --brand-bg: #F4F2EE;
+      --brand-card: #FFFFFF;
+      --brand-warm: #EAE5DE;
+      --brand-text: #1F1B1A;
+      --brand-muted: #7C7369;
+      --line: rgba(94, 42, 53, .20);
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      width: 1464px;
+      height: 600px;
+      margin: 0;
+      overflow: hidden;
+      background: var(--brand-bg);
+      color: var(--brand-text);
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .canvas {
+      position: relative;
+      width: 1464px;
+      height: 600px;
+      padding: 42px 58px 38px;
+      background:
+        radial-gradient(circle at 10% 10%, rgba(255,255,255,.78), transparent 26%),
+        linear-gradient(135deg, #F4F2EE 0%, #EFE8DD 100%);
+    }
+
+    .topline {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 54px;
+      margin-bottom: 16px;
+    }
+
+    h1 {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 52px;
+      line-height: 1;
+      font-weight: 500;
+      letter-spacing: 3px;
+    }
+
+    .tag {
+      min-width: 272px;
+      border: 1px solid rgba(94, 42, 53, .24);
+      border-radius: 999px;
+      padding: 11px 18px;
+      color: var(--brand-primary);
+      font-size: 18px;
+      line-height: 1.15;
+      text-align: center;
+      background: rgba(255, 255, 255, .42);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 418px 518px 348px;
+      gap: 24px;
+      align-items: stretch;
+      height: 442px;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, .72);
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      box-shadow: 0 12px 28px rgba(70, 54, 40, .08);
+      overflow: hidden;
+      height: 100%;
+    }
+
+    .card h2 {
+      margin: 0;
+      padding: 15px 20px 12px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 26px;
+      line-height: 1;
+      font-weight: 500;
+      letter-spacing: 2px;
+      color: var(--brand-primary);
+      background: var(--brand-warm);
+      border-bottom: 1px solid var(--line);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      table-layout: fixed;
+      font-size: 18px;
+      line-height: 1.14;
+    }
+
+    th, td {
+      padding: 9px 10px;
+      border-bottom: 1px solid rgba(94, 42, 53, .12);
+      text-align: center;
+      vertical-align: middle;
+      white-space: nowrap;
+    }
+
+    th {
+      color: var(--brand-primary);
+      font-weight: 700;
+      background: rgba(255, 255, 255, .42);
+    }
+
+    td:first-child, th:first-child {
+      width: 58px;
+      color: var(--brand-primary);
+      font-weight: 700;
+    }
+
+    .product td:nth-child(2), .product td:nth-child(3) {
+      font-size: 17px;
+    }
+
+    .body-table td { font-size: 16px; }
+    .body-table th { font-size: 17px; }
+
+    .guide {
+      padding: 18px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .diagram {
+      height: 178px;
+      position: relative;
+      border: 1px dashed rgba(94, 42, 53, .28);
+      border-radius: 6px;
+      background: linear-gradient(135deg, #E7E2DB, #D7D1C9);
+      display: grid;
+      place-items: center;
+    }
+
+    .placeholder-label {
+      color: var(--brand-primary);
+      font-size: 34px;
+      font-weight: 700;
+      text-align: center;
+      letter-spacing: 4px;
+    }
+
+    .sliders {
+      display: grid;
+      gap: 12px;
+      padding: 2px 2px 0;
+    }
+
+    .slider-row {
+      display: grid;
+      grid-template-columns: 92px 1fr 72px;
+      align-items: center;
+      gap: 10px;
+      font-size: 16px;
+      color: var(--brand-muted);
+    }
+
+    .slider-title {
+      color: var(--brand-primary);
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .rail {
+      height: 6px;
+      position: relative;
+      border-radius: 999px;
+      background: linear-gradient(90deg, #D8CABA, #B08D6E, #5E2A35);
+    }
+
+    .dot {
+      position: absolute;
+      top: 50%;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      border: 3px solid #fff;
+      background: var(--brand-primary);
+      box-shadow: 0 2px 8px rgba(0,0,0,.22);
+      transform: translate(-50%, -50%);
+    }
+
+    .medium .dot { left: 50%; }
+    .slim .dot { left: 76%; }
+    .middle .dot { left: 52%; }
+
+    .note {
+      position: absolute;
+      left: 58px;
+      right: 58px;
+      bottom: 17px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: var(--brand-muted);
+      font-size: 17px;
+      line-height: 1.2;
+    }
+
+    .note strong {
+      color: var(--brand-primary);
+      font-weight: 700;
+    }
+  </style>
+</head>
+<body>
+  <main class="canvas" aria-label="ELARAISE size chart">
+    <section class="topline">
+      <h1>SIZE CHART (IN)</h1>
+      <div class="tag">Slim fit with comfortable stretch</div>
+    </section>
+
+    <section class="grid">
+      <article class="card">
+        <h2>PRODUCT MEASUREMENTS</h2>
+        <table class="product" aria-label="Product measurements">
+          <thead>
+            <tr><th>Size</th><th>Bust</th><th>Length</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>XS</td><td>29.9 in / 76 cm</td><td>23.6 in / 60 cm</td></tr>
+            <tr><td>S</td><td>31.5 in / 80 cm</td><td>24.0 in / 61 cm</td></tr>
+            <tr><td>M</td><td>33.1 in / 84 cm</td><td>24.4 in / 62 cm</td></tr>
+            <tr><td>L</td><td>34.6 in / 88 cm</td><td>24.8 in / 63 cm</td></tr>
+            <tr><td>XL</td><td>36.2 in / 92 cm</td><td>25.2 in / 64 cm</td></tr>
+            <tr><td>2XL</td><td>37.8 in / 96 cm</td><td>25.6 in / 65 cm</td></tr>
+          </tbody>
+        </table>
+      </article>
+
+      <article class="card">
+        <h2>BODY MEASUREMENTS</h2>
+        <table class="body-table" aria-label="Body measurements">
+          <thead>
+            <tr><th>Size</th><th>Bust</th><th>Waist</th><th>Hip</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>XS</td><td>31.9-33.1</td><td>24.4-25.6</td><td>35.0-36.2</td></tr>
+            <tr><td>S</td><td>33.9-35.0</td><td>26.4-27.6</td><td>37.0-38.2</td></tr>
+            <tr><td>M</td><td>35.8-37.0</td><td>28.4-29.5</td><td>39.0-40.2</td></tr>
+            <tr><td>L</td><td>38.2-39.4</td><td>30.7-31.9</td><td>41.3-42.5</td></tr>
+            <tr><td>XL</td><td>41.3-42.5</td><td>33.9-35.0</td><td>44.5-45.7</td></tr>
+            <tr><td>2XL</td><td>44.5-45.7</td><td>37.0-38.2</td><td>47.6-48.8</td></tr>
+          </tbody>
+        </table>
+      </article>
+
+      <article class="card guide">
+        <div class="diagram" aria-label="Bust and length guide">
+          <div class="placeholder-label">待素材</div>
+        </div>
+
+        <div class="sliders">
+          <div class="slider-row medium">
+            <span class="slider-title">Stretch</span><span class="rail"><span class="dot"></span></span><span>Medium</span>
+          </div>
+          <div class="slider-row slim">
+            <span class="slider-title">Fit Type</span><span class="rail"><span class="dot"></span></span><span>Slim</span>
+          </div>
+          <div class="slider-row middle">
+            <span class="slider-title">Thickness</span><span class="rail"><span class="dot"></span></span><span>Middle</span>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <footer class="note">
+      <span><strong>Fit note:</strong> For a more relaxed look, consider choosing one size up.</span>
+      <span>Please allow 0.5–1 inch difference due to manual measurement.</span>
+    </footer>
+  </main>
+</body>
+</html>
