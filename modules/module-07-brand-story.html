@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=1464, initial-scale=1">
+  <title>Module 07 - Brand Story</title>
+  <style>
+    :root {
+      --brand-primary: #5E2A35;
+      --brand-accent: #B08D6E;
+      --brand-bg: #F4F2EE;
+      --brand-card: #FFFFFF;
+      --brand-warm: #EAE5DE;
+      --brand-text: #1F1B1A;
+      --brand-muted: #7C7369;
+      --white: #F8F6F2;
+      --red: #B34236;
+      --wine: #5E2A35;
+      --brown: #6B4A36;
+      --black: #1F1B1A;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      width: 1464px;
+      height: 600px;
+      margin: 0;
+      overflow: hidden;
+      background: var(--brand-bg);
+      color: var(--brand-text);
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .canvas {
+      width: 1464px;
+      height: 600px;
+      position: relative;
+      padding: 54px 68px 48px;
+      background:
+        linear-gradient(90deg, rgba(255,255,255,.62), rgba(255,255,255,0) 48%),
+        linear-gradient(135deg, #F4F2EE 0%, #EFE8DD 100%);
+    }
+
+    .logo {
+      width: 220px;
+      height: auto;
+      display: block;
+      margin-bottom: 40px;
+    }
+
+    .story {
+      width: 470px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .eyebrow {
+      color: var(--brand-accent);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 42px;
+      font-style: italic;
+      line-height: 1;
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      margin: 0 0 24px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 64px;
+      line-height: .96;
+      font-weight: 500;
+      letter-spacing: 3px;
+    }
+
+    p {
+      width: 430px;
+      margin: 0;
+      color: var(--brand-muted);
+      font-size: 26px;
+      line-height: 1.35;
+    }
+
+    .ribbon {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 74px;
+      background: #C9B9A3;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 76px;
+      color: #fff;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 25px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .swatch-stage {
+      position: absolute;
+      right: 62px;
+      top: 58px;
+      width: 790px;
+      height: 426px;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 16px;
+      align-items: end;
+    }
+
+    .color-card {
+      height: 374px;
+      position: relative;
+      border: 9px solid rgba(255, 255, 255, .86);
+      border-radius: 6px;
+      background: rgba(255,255,255,.55);
+      box-shadow: 0 16px 34px rgba(72, 52, 38, .14);
+      transform-origin: bottom center;
+      overflow: hidden;
+    }
+
+    .color-card:nth-child(1) { transform: rotate(-4deg) translateY(18px); }
+    .color-card:nth-child(2) { transform: rotate(2deg) translateY(-4px); }
+    .color-card:nth-child(3) { transform: rotate(-1deg) translateY(12px); }
+    .color-card:nth-child(4) { transform: rotate(3deg) translateY(-8px); }
+    .color-card:nth-child(5) { transform: rotate(-3deg) translateY(16px); }
+
+    .product-photo {
+      position: absolute;
+      left: 10px;
+      right: 10px;
+      top: 10px;
+      height: 250px;
+      width: calc(100% - 20px);
+      object-fit: cover;
+      object-position: center top;
+      background: #E1DED8;
+    }
+
+    .label {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 22px;
+      text-align: center;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 24px;
+      letter-spacing: 2px;
+      color: var(--brand-primary);
+      text-transform: uppercase;
+    }
+
+    .dots {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 68px;
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .dot {
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      border: 2px solid rgba(94,42,53,.22);
+      background: var(--color);
+    }
+  </style>
+</head>
+<body>
+  <main class="canvas" aria-label="ELARAISE brand story">
+    <section class="story">
+      <img class="logo" src="../assets/logo.svg" alt="ELARAISE">
+      <div class="eyebrow">Effortless</div>
+      <h1>FROM THE BRAND</h1>
+      <p>Thoughtful everyday pieces made for soft textures, easy outfits, and polished casual style.</p>
+    </section>
+
+    <section class="swatch-stage" aria-label="Five color display">
+      <article class="color-card" style="--color: var(--white)">
+        <img class="product-photo" src="../assets/color-white.jpg" alt="White ELARAISE Henley top">
+        <div class="dots"><span class="dot"></span></div>
+        <div class="label">White</div>
+      </article>
+      <article class="color-card" style="--color: var(--red)">
+        <img class="product-photo" src="../assets/color-red.jpg" alt="Red ELARAISE Henley top">
+        <div class="dots"><span class="dot"></span></div>
+        <div class="label">Red</div>
+      </article>
+      <article class="color-card" style="--color: var(--wine)">
+        <img class="product-photo" src="../assets/color-wine.jpg" alt="Wine ELARAISE Henley top">
+        <div class="dots"><span class="dot"></span></div>
+        <div class="label">Wine</div>
+      </article>
+      <article class="color-card" style="--color: var(--brown)">
+        <img class="product-photo" src="../assets/color-brown.jpg" alt="Brown ELARAISE Henley top">
+        <div class="dots"><span class="dot"></span></div>
+        <div class="label">Brown</div>
+      </article>
+      <article class="color-card" style="--color: var(--black)">
+        <img class="product-photo" src="../assets/color-black.jpg" alt="Black ELARAISE Henley top">
+        <div class="dots"><span class="dot"></span></div>
+        <div class="label">Black</div>
+      </article>
+    </section>
+
+    <footer class="ribbon" aria-label="brand values">
+      <span>Soft ribbed texture</span>
+      <span>Five wearable colors</span>
+      <span>Everyday fitted style</span>
+    </footer>
+  </main>
+</body>
+</html>
