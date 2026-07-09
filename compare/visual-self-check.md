@@ -17,11 +17,14 @@
 - Layout change: main model is a cutout sticker, not a rectangular photo card. Detail and fabric images remain rectangular white cards as allowed small/detail images.
 - Required decorative elements: one large two-line `Henley Mood` script title, small `Detail Proof` / `Soft Touch` script accents, watermark letters, # tags, and curled dashed arrows are present.
 - Rule 17 typography: uses italic serif notes, expanded-letter labels, 7.5% translucent watermark words, brown + dark gray script accents, and wavy underlines without adding font families.
+- Annotation control: active italic notes in 01-03 are limited to the Hero neckline note and the Fabric texture note; the former detail-module `marble-look` note was removed to avoid overlapping the `#DETAILS` tag.
+- Text-to-model bite check: module 01 uses the `#OOTD` tag on the protagonist hand/hem edge, module 02 uses `Detail Proof` near the back-view protagonist, and module 03 uses `#SOFT RIB` near the side-view protagonist.
 - Color-weight check: black is the protagonist color for modules 01-03; wine appears only in close-up detail/fabric cards.
 - View coverage: module 01 uses black front view, module 02 uses black back over-shoulder view, and module 03 uses black side view.
 - Rule 19 model-count check: module 01/02/03 each has one assigned black protagonist asset; no extra support model is used in these modules.
 - Detail/fabric uniqueness: module 02 uses independent neckline/button/sleeve close-ups; the fabric swirl macro appears only once in module 03.
-- Verdict: pass after moving script titles away from key headings, enlarging the unique module 02/03 protagonists, and moving faces away from slice lines.
+- Three-second scan test: title -> protagonist -> tag/card path is continuous in modules 01-03, with no wide vertical blank band over 200px.
+- Verdict: pass after moving script titles away from key headings, removing the overlapping detail note, enlarging the unique module 02/03 protagonists, and moving faces away from slice lines.
 
 ## Continuous Canvas 04-05
 - Source: `modules/continuous-04-05.html`
@@ -31,10 +34,14 @@
 - Layout change: all main models are transparent cutout stickers. The color module uses generated cutout models plus the generated accessory flat-lay group instead of direct product-photo crops.
 - Required decorative elements: one large two-line `Outfit Notes` script title, small `Color Story` script accent, curled dashed arrows, # tags, swatches, and accessory flat-lay are present.
 - Rule 17 typography: uses italic serif notes, expanded-letter `WALKING VIEW` / `FIVE SHADES` labels, 7.5% translucent watermark words, brown + dark gray script accents, and wavy underlines without adding font families.
+- Annotation control: the Style It walking-view italic note and Color Story seated note were removed; no active italic note remains in 04-05.
+- Text-to-model bite check: module 04 uses `LAYER READY` overlapping the walking protagonist arm/leg edge; module 05 uses the lifted styling capsules near the seated protagonist foot and accessory flat-lay.
+- Layout reduction: module 04 keeps only one enlarged walking protagonist; module 05 removes the redundant `#COLOR DROP` label, enlarges the seated protagonist, and moves the three styling capsules up beside the accessory group.
 - Color-weight check: black is the protagonist color for modules 04-05; color variety is handled by swatches and accessories instead of extra model cutouts.
 - Rule 19 model-count check: module 04 uses the black walking protagonist; module 05 uses the black seated protagonist; no white/side-view support model remains in this continuous canvas.
 - Anchor/protagonist check: each screen has a single immediately legible protagonist; module 05 keeps `FIND YOUR EVERYDAY SHADE` fully readable above the swatches.
-- Verdict: pass after moving swatches away from the title, separating script accents from cutout models, and reducing the model count to one protagonist per module.
+- Three-second scan test: module 04 reads `STYLE IT YOUR WAY` -> walking protagonist -> `LAYER READY`; module 05 reads `FIND YOUR EVERYDAY SHADE` -> seated protagonist -> styling capsules/accessory group, with no major jump or empty vertical band.
+- Verdict: pass after moving swatches away from the title, deleting floating notes, reducing redundant labels, enlarging protagonists, and tightening text-to-model bite.
 
 ## Module 06 - Size Chart
 - Source: `modules/module-06-size-chart.html`
