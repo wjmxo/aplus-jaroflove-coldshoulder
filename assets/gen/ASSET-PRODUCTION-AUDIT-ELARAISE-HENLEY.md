@@ -20,7 +20,7 @@ Scope: phase-one asset library only. No page production, layout, slicing, or mod
 | First auxiliary model poses: White front / back / side | `gen-model-white-01.png`, `gen-model-white-back-01.png` | `gen-model-white-side-01.png` | PASS |
 | Half-body portraits: Black front / Black back / White front | `gen-portrait-black-anchor-01.png`, `gen-portrait-white-01.png` | `gen-portrait-black-back-01.png` | PASS |
 | Main color detail set: neckline / button-placket / sleeve cuff / fabric swirl | None in Black | `gen-detail-black-neckline-01.png`, `gen-detail-black-button-01.png`, `gen-detail-black-sleeve-01.png`, `gen-detail-black-fabric-01.png` | PASS |
-| Warm variant core details x2 | `gen-detail-wine-01.png`, `gen-detail-wine-neckline-02.png`, `gen-detail-wine-button-01.png`, `gen-detail-wine-03.png` | None | PASS |
+| Warm variant core details x2+ | `gen-detail-wine-01.png`, `gen-detail-wine-neckline-02.png`, `gen-detail-wine-button-01.png`, `gen-detail-wine-03.png` | `gen-detail-wine-stretch-01.png` | PASS |
 | Scene group x4 derived from product positioning | None as independent scene assets | `gen-scene-black-office-01.png`, `gen-scene-black-cafe-01.png`, `gen-scene-black-street-01.png`, `gen-scene-black-home-01.png` | PASS |
 | Styling flat-lay group 4-5 items | `gen-accessory-neutral-01.png` | None | PASS |
 | Size annotation model | `gen-model-black-01.png`, `gen-portrait-black-anchor-01.png`, `gen-model-white-01.png` | None | PASS |
@@ -39,6 +39,18 @@ Scope: phase-one asset library only. No page production, layout, slicing, or mod
 | `gen-scene-black-cafe-01.png` | Black | Cafe scene | Future scenario module asset | PASS |
 | `gen-scene-black-street-01.png` | Black | Street walking scene | Future scenario module asset | PASS |
 | `gen-scene-black-home-01.png` | Black | Home scene | Future scenario module asset | PASS |
+| `gen-detail-wine-stretch-01.png` | Wine | Hands stretching ribbed fabric macro | Easy Stretch proof for fabric module | PASS |
+
+## Rule 22 Gaze / Expression Audit
+
+Official `gen-*` assets after this run: 39.
+
+| Group | Assets | Gaze / expression status |
+|---|---|---|
+| Active calm anchors and protagonists | `gen-portrait-black-anchor-01.png`, `gen-model-black-back-01.png`, `gen-model-black-sidewalk-01.png`, `gen-model-duo-black-front-white-back-01.png` | Uses looking-away, over-shoulder, and focused side-view reads; active page avoids all-camera-facing repetition |
+| Approved varied color/support assets | `gen-model-white-side-01.png`, `gen-model-red-sit-02.png`, `gen-model-wine-side-01.png`, `gen-model-black-sit-01.png` | Used to diversify color-card head direction and pose |
+| Draft redundancy pool | `gen-portrait-wine-01.png`, `gen-portrait-black-01.png`, `gen-portrait-red-01.png`, `gen-model-wine-01.png`, `gen-model-brown-01.png`, `gen-model-red-01.png`, `gen-portrait-black-close-01.png` | Marked Draft in `INDEX.md` because they repeat camera-facing / soft-smile direction too often |
+| Optional future补货 | Black downward-looking sleeve-adjusting cutout | Only needed if a future layout must explicitly show the "低头" gaze class in a main model |
 
 ## Quality Gate Notes
 

@@ -2,46 +2,47 @@
 
 All generated assets in this folder use `assets/color-*.jpg` only as garment-fidelity references. The original `assets/color-*.jpg` files are not used directly in the updated module artwork.
 
-| File | Use | Reference source | Notes |
-|---|---|---|---|
-| `gen-portrait-wine-01.png` | First identity-lock portrait and module 01/05 protagonist | `assets/color-wine.jpg` | Waist-up transparent PNG, used as page identity reference, clear neckline/buttons/rib texture |
-| `gen-portrait-white-01.png` | Module 04 anchor protagonist | `assets/color-white.jpg`, `gen-portrait-wine-01.png` | Waist-up transparent PNG, large anchor crossing modules 04/05 |
-| `gen-portrait-brown-01.png` | Brown protagonist/support portrait | `assets/color-brown.jpg`, `gen-portrait-wine-01.png` | Waist-up transparent PNG, coffee styling cue |
-| `gen-portrait-black-01.png` | Black protagonist/support portrait | `assets/color-black.jpg`, `gen-portrait-wine-01.png` | Waist-up transparent PNG, office-ready tone |
-| `gen-portrait-red-01.png` | Module 03 protagonist portrait | `assets/color-red.jpg`, `gen-portrait-wine-01.png` | Waist-up transparent PNG, used for fabric module |
-| `gen-model-wine-side-01.png` | Side-view support pose for module 04 styling story | `assets/color-wine.jpg`, `gen-portrait-wine-01.png` | Transparent PNG, side pose, notched V neckline, two buttons, ribbed long sleeve top |
-| `gen-model-white-back-01.png` | Back-view support pose for module 05 color/story movement | `assets/color-white.jpg`, `gen-portrait-wine-01.png` | Transparent PNG, rear fit view, white ribbed long sleeve top |
-| `gen-model-white-side-01.png` | Stage-one core pack first-auxiliary side-view pose | `assets/color-white.jpg`, `gen-portrait-black-anchor-01.png` | Transparent PNG, white side view, generated to complete the White front/back/side set |
-| `gen-model-red-sit-02.png` | Seated support pose for module 05 styling/color composition | `assets/color-red.jpg`, `gen-portrait-wine-01.png` | Transparent PNG, seated pose, notched V neckline, two buttons, ribbed long sleeve top |
-| `gen-portrait-black-anchor-01.png` | Module 01 front anchor/protagonist portrait | `assets/color-black.jpg`, `gen-portrait-wine-01.png` | Transparent PNG, tall waist-up anchor, clear split V neckline, two buttons, ribbed texture |
-| `gen-portrait-black-back-01.png` | Stage-one core pack main-color back half-body portrait | `assets/color-black.jpg`, `gen-portrait-black-anchor-01.png` | Transparent PNG, black back-view head-to-hip portrait, ribbed back fit visible |
-| `gen-portrait-black-close-01.png` | Historical black close-up portrait, not assigned in current Rule 19 layout | `assets/color-black.jpg`, `gen-portrait-wine-01.png` | Transparent PNG, waist-up close view, clear neckline/buttons/rib texture |
-| `gen-model-black-back-01.png` | Module 02 back over-shoulder protagonist pose | `assets/color-black.jpg`, `gen-portrait-wine-01.png` | Transparent PNG, rear fit view, long sleeves and rib texture |
-| `gen-model-black-sidewalk-01.png` | Module 03 side-view protagonist pose | `assets/color-black.jpg`, `gen-portrait-wine-01.png` | Transparent PNG, side walking pose, neckline/buttons visible from side angle |
-| `gen-model-black-walk-02.png` | Historical/inactive walking pose retained in asset library | `assets/color-black.jpg`, `gen-portrait-black-anchor-01.png` | Transparent PNG, 3/4 front walking pose; removed from active 04-05 layout after double-anchor update |
-| `gen-model-black-sit-01.png` | Historical/inactive seated pose retained in asset library | `assets/color-black.jpg`, `gen-portrait-black-anchor-01.png` | Transparent PNG, seated pose; removed from active 04-05 layout after double-anchor update |
-| `gen-model-duo-black-front-white-back-01.png` | Module 04/05 double-model anchor group | `assets/color-black.jpg`, `assets/color-white.jpg` | Transparent PNG, black front view with notched V/two buttons and white back view with ribbed back fit, used as one crossing anchor group |
-| `gen-model-wine-01.png` | Main wine cutout model | `assets/color-wine.jpg` | Full-body transparent PNG, notched V neckline, two buttons, ribbed long sleeve top |
-| `gen-model-white-01.png` | White cutout model | `assets/color-white.jpg` | Full-body transparent PNG, walking pose |
-| `gen-model-brown-01.png` | Brown cutout model | `assets/color-brown.jpg` | Full-body transparent PNG, cafe prop pose |
-| `gen-model-black-01.png` | Black cutout model | `assets/color-black.jpg` | Full-body transparent PNG, office-ready pose |
-| `gen-model-red-01.png` | Red cutout model | `assets/color-red.jpg` | Seated transparent PNG |
-| `gen-accessory-neutral-01.png` | Styling flat-lay cutout group | Generated from styling brief | Jeans, handbag, earrings, sandals, sunglasses, belt |
-| `gen-detail-black-neckline-01.png` | Stage-one core pack main-color neckline macro | `assets/color-black.jpg` | Black notched split V neckline, two-button structure visible |
-| `gen-detail-black-button-01.png` | Stage-one core pack main-color button/placket macro | `assets/color-black.jpg` | Black Henley placket with exactly two marble-look decorative buttons |
-| `gen-detail-black-sleeve-01.png` | Stage-one core pack main-color sleeve cuff macro | `assets/color-black.jpg` | Black long sleeve cuff and rib texture |
-| `gen-detail-black-fabric-01.png` | Stage-one core pack main-color fabric swirl macro | `assets/color-black.jpg` | Black ribbed fabric swirl, product-only textile macro |
-| `gen-detail-wine-01.png` | Neckline and button macro | `assets/color-wine.jpg` | Notched neckline and two-button detail |
-| `gen-detail-wine-neckline-02.png` | Independent neckline macro for module 02 | `assets/color-wine.jpg` | Separate notched split V neckline close-up used so detail grid does not repeat the Hero card |
-| `gen-detail-wine-button-01.png` | Independent button macro for module 02 | `assets/color-wine.jpg` | Separate two-button/placket close-up used so detail module does not repeat the fabric macro |
-| `gen-detail-wine-02.png` | Ribbed fabric macro | `assets/color-wine.jpg`, `assets/color-white.jpg` | Ribbed fabric fold and contrast color |
-| `gen-detail-wine-03.png` | Sleeve cuff macro | `assets/color-wine.jpg` | Long sleeve cuff and rib texture |
-| `gen-bg-warm-01.png` | Street/cafe blurred background | Generated from style brief | Warm bokeh street/cafe backdrop |
-| `gen-bg-warm-02.png` | Interior blurred background | Generated from style brief | Cream interior/lifestyle backdrop |
-| `gen-scene-black-office-01.png` | Stage-one core pack office/business-casual scene | `assets/color-black.jpg`, `gen-portrait-black-anchor-01.png` | Black Henley office scene, warm low-detail background for future typography |
-| `gen-scene-black-cafe-01.png` | Stage-one core pack cafe scene | `assets/color-black.jpg`, `gen-portrait-black-anchor-01.png` | Black Henley cafe scene, relaxed warm lifestyle setting |
-| `gen-scene-black-street-01.png` | Stage-one core pack street scene | `assets/color-black.jpg`, `gen-portrait-black-anchor-01.png` | Black Henley warm street walking scene |
-| `gen-scene-black-home-01.png` | Stage-one core pack home scene | `assets/color-black.jpg`, `gen-portrait-black-anchor-01.png` | Black Henley cozy home scene |
+| File | Use | Reference source | 视线 | 表情 | Notes |
+|---|---|---|---|---|---|
+| `gen-portrait-wine-01.png` | First identity-lock portrait | `assets/color-wine.jpg` | 看镜头 | 浅笑不露齿 | Draft: front/camera redundancy; keep as identity reference |
+| `gen-portrait-white-01.png` | First-auxiliary front half-body portrait | `assets/color-white.jpg`, `gen-portrait-wine-01.png` | 看镜头 | 浅笑不露齿 | Approved library asset |
+| `gen-portrait-brown-01.png` | Brown portrait for brand/color support | `assets/color-brown.jpg`, `gen-portrait-wine-01.png` | 看镜头 | 浅笑不露齿 | Draft if too many camera-facing cards are used |
+| `gen-portrait-black-01.png` | Black support portrait | `assets/color-black.jpg`, `gen-portrait-wine-01.png` | 看镜头 | 浅笑不露齿 | Draft: superseded by calmer black anchor assets |
+| `gen-portrait-red-01.png` | Red portrait | `assets/color-red.jpg`, `gen-portrait-wine-01.png` | 看镜头 | 浅笑不露齿 | Draft: redundant front/camera expression |
+| `gen-model-wine-side-01.png` | Wine side-view color support | `assets/color-wine.jpg`, `gen-portrait-wine-01.png` | 望向画外 | 专注神态 | Approved for color-card diversity |
+| `gen-model-white-back-01.png` | White back-view support pose | `assets/color-white.jpg`, `gen-portrait-wine-01.png` | 回眸过肩 | 平静松弛 | Approved library asset |
+| `gen-model-white-side-01.png` | First-auxiliary side-view pose | `assets/color-white.jpg`, `gen-portrait-black-anchor-01.png` | 望向画外 | 平静松弛 | Approved for Rule 22 side-direction coverage |
+| `gen-model-red-sit-02.png` | Red seated support pose | `assets/color-red.jpg`, `gen-portrait-wine-01.png` | 望向画外 | 平静松弛 | Approved for non-standing/color-card diversity |
+| `gen-portrait-black-anchor-01.png` | Module 01 front anchor/protagonist portrait | `assets/color-black.jpg`, `gen-portrait-wine-01.png` | 望向画外 | 平静松弛 | Active hero anchor, clear split V/two buttons/rib texture |
+| `gen-portrait-black-back-01.png` | Main-color back half-body portrait | `assets/color-black.jpg`, `gen-portrait-black-anchor-01.png` | 回眸过肩 | 平静松弛 | Approved back portrait |
+| `gen-portrait-black-close-01.png` | Historical black close-up portrait | `assets/color-black.jpg`, `gen-portrait-wine-01.png` | 看镜头 | 浅笑不露齿 | Draft: not assigned in current Rule 19 layout |
+| `gen-model-black-back-01.png` | Module 02 back over-shoulder protagonist pose | `assets/color-black.jpg`, `gen-portrait-wine-01.png` | 回眸过肩 | 平静松弛 | Active detail protagonist |
+| `gen-model-black-sidewalk-01.png` | Module 03 side-view protagonist pose | `assets/color-black.jpg`, `gen-portrait-wine-01.png` | 望向画外 | 专注神态 | Active fabric protagonist |
+| `gen-model-black-walk-02.png` | Historical walking pose | `assets/color-black.jpg`, `gen-portrait-black-anchor-01.png` | 望向画外 | 专注神态 | Draft: removed from active 04-05 layout after double-anchor update |
+| `gen-model-black-sit-01.png` | Black seated pose | `assets/color-black.jpg`, `gen-portrait-black-anchor-01.png` | 望向画外 | 平静松弛 | Approved for color-card diversity |
+| `gen-model-duo-black-front-white-back-01.png` | Module 04/05 double-model anchor group | `assets/color-black.jpg`, `assets/color-white.jpg` | 望向画外 + 回眸过肩 | 平静松弛 | Active cross-slice anchor group |
+| `gen-model-wine-01.png` | Wine full-body model | `assets/color-wine.jpg` | 看镜头 | 浅笑不露齿 | Draft: front/camera redundancy |
+| `gen-model-white-01.png` | White full-body model | `assets/color-white.jpg` | 望向画外 | 浅笑不露齿 | Approved fit-reference reserve |
+| `gen-model-brown-01.png` | Brown full-body model | `assets/color-brown.jpg` | 看镜头 | 浅笑不露齿 | Draft: front/camera redundancy |
+| `gen-model-black-01.png` | Black seven-eighths/front model | `assets/color-black.jpg` | 望向画外 | 平静松弛 | Active size chart measurement model |
+| `gen-model-red-01.png` | Red seated transparent PNG | `assets/color-red.jpg` | 看镜头 | 浅笑不露齿 | Draft: replaced by `gen-model-red-sit-02.png` for diversity |
+| `gen-accessory-neutral-01.png` | Styling flat-lay cutout group | Generated from styling brief | - | - | Jeans, handbag, earrings, sandals, sunglasses, belt |
+| `gen-detail-black-neckline-01.png` | Main-color neckline macro | `assets/color-black.jpg` | - | - | Black notched split V neckline, two-button structure visible |
+| `gen-detail-black-button-01.png` | Main-color button/placket macro | `assets/color-black.jpg` | - | - | Black Henley placket with exactly two marble-look decorative buttons |
+| `gen-detail-black-sleeve-01.png` | Main-color sleeve cuff macro | `assets/color-black.jpg` | - | - | Black long sleeve cuff and rib texture |
+| `gen-detail-black-fabric-01.png` | Main-color fabric swirl macro | `assets/color-black.jpg` | - | - | Black ribbed fabric swirl, product-only textile macro |
+| `gen-detail-wine-01.png` | Neckline and button macro | `assets/color-wine.jpg` | - | - | Notched neckline and two-button detail |
+| `gen-detail-wine-neckline-02.png` | Independent neckline macro for module 02 | `assets/color-wine.jpg` | - | - | Separate notched split V neckline close-up |
+| `gen-detail-wine-button-01.png` | Independent button macro for module 02 | `assets/color-wine.jpg` | - | - | Separate two-button/placket close-up |
+| `gen-detail-wine-02.png` | Ribbed fabric macro | `assets/color-wine.jpg`, `assets/color-white.jpg` | - | - | Ribbed fabric fold and contrast color |
+| `gen-detail-wine-03.png` | Sleeve cuff macro | `assets/color-wine.jpg` | - | - | Long sleeve cuff and rib texture |
+| `gen-detail-wine-stretch-01.png` | Easy Stretch proof macro | `assets/color-wine.jpg` | - | - | Hands gently stretching wine ribbed fabric; added for product feature proof |
+| `gen-bg-warm-01.png` | Street/cafe blurred background | Generated from style brief | - | - | Warm bokeh street/cafe backdrop |
+| `gen-bg-warm-02.png` | Interior blurred background | Generated from style brief | - | - | Cream interior/lifestyle backdrop |
+| `gen-scene-black-office-01.png` | Office/business-casual scene | `assets/color-black.jpg`, `gen-portrait-black-anchor-01.png` | 望向画外 | 平静松弛 | Black Henley office scene, warm low-detail background |
+| `gen-scene-black-cafe-01.png` | Cafe scene | `assets/color-black.jpg`, `gen-portrait-black-anchor-01.png` | 望向画外 | 平静松弛 | Black Henley cafe scene, relaxed lifestyle setting |
+| `gen-scene-black-street-01.png` | Street scene | `assets/color-black.jpg`, `gen-portrait-black-anchor-01.png` | 望向画外 | 专注神态 | Black Henley warm street walking scene |
+| `gen-scene-black-home-01.png` | Home scene | `assets/color-black.jpg`, `gen-portrait-black-anchor-01.png` | 望向画外 | 平静松弛 | Black Henley cozy home scene |
 
 ## Fidelity Check
 
@@ -60,12 +61,23 @@ Audit date: 2026-07-10. Main color for the current approved A+ direction: Black.
 | First auxiliary model poses: White front / back / side | `gen-model-white-01.png`, `gen-model-white-back-01.png`, `gen-model-white-side-01.png` | PASS |
 | Half-body portraits: Black front / Black back / White front | `gen-portrait-black-anchor-01.png`, `gen-portrait-black-back-01.png`, `gen-portrait-white-01.png` | PASS |
 | Main color detail set: Black neckline / button-placket / sleeve cuff / fabric swirl | `gen-detail-black-neckline-01.png`, `gen-detail-black-button-01.png`, `gen-detail-black-sleeve-01.png`, `gen-detail-black-fabric-01.png` | PASS |
-| Warm variant core details: Wine core detail support x2+ | `gen-detail-wine-01.png`, `gen-detail-wine-neckline-02.png`, `gen-detail-wine-button-01.png`, `gen-detail-wine-03.png` | PASS |
+| Warm variant core details: Wine core detail support x2+ | `gen-detail-wine-01.png`, `gen-detail-wine-neckline-02.png`, `gen-detail-wine-button-01.png`, `gen-detail-wine-03.png`, `gen-detail-wine-stretch-01.png` | PASS |
 | Scene group: office / cafe / street / home | `gen-scene-black-office-01.png`, `gen-scene-black-cafe-01.png`, `gen-scene-black-street-01.png`, `gen-scene-black-home-01.png` | PASS |
 | Styling flat-lay group: 4-5 accessory items | `gen-accessory-neutral-01.png` | PASS |
 | Size annotation model: main-color seven-eighths/front model or approved fit-reference model | `gen-model-black-01.png`, `gen-portrait-black-anchor-01.png`, `gen-model-white-01.png` | PASS |
 
-Shortage request list: none. The phase-one core pack is ready for user review. Do not start page production until the user confirms the asset library.
+Shortage request list: none. The feature-proof stretch macro has been added to the asset library.
+
+## Rule 22 Gaze / Expression Audit
+
+Official `gen-*` asset count after this update: 39. Draft labels are applied to redundant camera-facing or same-expression model assets so phase-two layout can prioritize gaze and expression variety.
+
+| Category | Active/approved examples | Draft/redundant examples | Result |
+|---|---|---|---|
+| 看镜头 | `gen-portrait-white-01.png` as reserve | `gen-portrait-wine-01.png`, `gen-portrait-black-01.png`, `gen-portrait-red-01.png`, `gen-model-wine-01.png`, `gen-model-brown-01.png`, `gen-model-red-01.png` | Camera-facing redundancy marked Draft |
+| 望向画外 | `gen-portrait-black-anchor-01.png`, `gen-model-black-sidewalk-01.png`, `gen-model-white-side-01.png`, `gen-model-black-01.png` | `gen-model-black-walk-02.png` | Approved coverage |
+| 回眸过肩 | `gen-model-black-back-01.png`, `gen-portrait-black-back-01.png`, `gen-model-white-back-01.png`, `gen-model-duo-black-front-white-back-01.png` | None | Approved coverage |
+| 低头/专注 | Current library has focused walking/side-view assets, but no strong downward-looking hero cutout | If future page needs this class, request a phase-one补货 asset: black model glancing down adjusting sleeve | Tracked as optional future补货, not blocking current requested modules |
 
 ## Full Page Module Asset Allocation (Rule 19)
 
@@ -78,8 +90,8 @@ Rule 19 self-check: no non-exempt generated model file is assigned to more than 
 | 03 Fabric | Protagonist | `gen-model-black-sidewalk-01.png` | Black side-view walking crop | Unique |
 | 04 Scenario | Double anchor group, upper body | `gen-model-duo-black-front-white-back-01.png` | Black front + white back, head/chest in Style It | Unique group |
 | 05 Styling + Color | Double anchor group, lower body continuation | `gen-model-duo-black-front-white-back-01.png` | Same group legs/hips extend into Color Story | Allowed deliberate cross-slice continuation |
-| 06 Size Chart | Measurement model | `gen-model-white-01.png` | White fit/measurement guide | Unique outside brand-lineup exception |
-| 07 Brand Story | From the Brand color lineup | `gen-model-white-01.png`, `gen-model-red-01.png`, `gen-model-wine-01.png`, `gen-model-brown-01.png`, `gen-model-black-01.png` | Multi-color product lineup | Exempt: color/brand display |
+| 06 Size Chart | Measurement model | `gen-model-black-01.png` | Black seven-eighths/front measurement guide | Unique outside brand-lineup exception |
+| 07 Brand Story | From the Brand color lineup | `gen-model-white-side-01.png`, `gen-model-red-sit-02.png`, `gen-model-wine-side-01.png`, `gen-portrait-brown-01.png`, `gen-model-black-sit-01.png` | Multi-color product lineup with varied pose/view direction | Exempt: color/brand display |
 
 ## Detail Asset Allocation (Rule 19)
 
@@ -90,3 +102,4 @@ Rule 19 self-check: no non-exempt generated model file is assigned to more than 
 | 02 Detail Grid | `gen-detail-wine-button-01.png` | Independent placket/button macro | Unique |
 | 02 Detail Grid | `gen-detail-wine-03.png` | Sleeve cuff macro | Unique |
 | 03 Fabric | `gen-detail-wine-02.png` | Ribbed fabric swirl macro | Unique; fabric swirl appears only here |
+| 03 Fabric | `gen-detail-wine-stretch-01.png` | Hands stretching wine ribbed fabric | Unique; added for Easy Stretch proof |

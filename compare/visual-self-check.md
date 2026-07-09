@@ -7,7 +7,9 @@
 - New pose assets added this round: `gen-model-wine-side-01.png`, `gen-model-white-back-01.png`, and `gen-model-red-sit-02.png`. Pose check contact sheet is saved at `compare/pose-generated-check.jpg`.
 - Black-primary assets added this round: `gen-portrait-black-anchor-01.png`, `gen-portrait-black-close-01.png`, `gen-model-black-back-01.png`, and `gen-model-black-sidewalk-01.png`. Black pose check contact sheet is saved at `compare/black-pose-generated-check.jpg`.
 - Rule 19/20 assets added this round: `gen-model-black-walk-02.png`, `gen-model-black-sit-01.png`, `gen-detail-wine-neckline-02.png`, `gen-detail-wine-button-01.png`, and `gen-model-duo-black-front-white-back-01.png`.
+- Product-feature final assets added this round: `gen-detail-wine-stretch-01.png` for the Easy Stretch fabric proof.
 - Full-page asset allocation is recorded in `assets/gen/INDEX.md`; non-exempt model assets are not reused across modules 01-07.
+- Rule 22 gaze/expression fields and Draft redundancy marks are recorded in `assets/gen/INDEX.md`.
 
 ## Continuous Canvas 01-03
 - Source: `modules/continuous-01-03.html`
@@ -15,14 +17,18 @@
 - Slice outputs: `module-01-hero.png`, `module-02-detail-grid.png`, `module-03-fabric.png`
 - Slice safety: y=600 crosses the soft camel transition band and low-detail lower-body/background zones; y=1200 crosses the neutral transition band near lower-body/blank zones. Faces, hands, headlines, button macro cards, and key text stay at least 60px away from the slice line.
 - Layout change: main model is a cutout sticker, not a rectangular photo card. Detail and fabric images remain rectangular white cards as allowed small/detail images.
-- Required decorative elements: one large two-line `Henley Mood` script title, small `Detail Proof` / `Soft Touch` script accents, watermark letters, # tags, and curled dashed arrows are present.
+- Required decorative elements: one large two-line `Henley Mood` script title, small `Detail Proof` / `Soft Touch` script accents, watermark letters, # tags, curled dashed arrows, and on-model dashed callouts are present.
 - Rule 17 typography: uses italic serif notes, expanded-letter labels, 7.5% translucent watermark words, brown + dark gray script accents, and wavy underlines without adding font families.
-- Annotation control: active italic notes in 01-03 are limited to the Hero neckline note and the Fabric texture note; the former detail-module `marble-look` note was removed to avoid overlapping the `#DETAILS` tag.
+- Annotation control: the former Hero/Fabric italic notes were removed where they competed with direct proof labels; the detail bridge line stays below the three cards and does not overlap the slice line.
+- Color bridge check: module 02 now states `Details shown in Wine — identical design across all five colors`, resolving the black-protagonist/wine-detail color-read gap.
+- Product proof check: module 03 now pairs ribbed texture with `Easy Stretch` hands-pulling-fabric proof; no unsupported `4-Way` claim is used.
+- SVG UI icon exception: module 03 uses linear circle UI icons for Soft Touch / Breathable / Easy Stretch / Machine Wash; these are function icons, not product illustrations.
 - Text-to-model bite check: module 01 uses the `#OOTD` tag on the protagonist hand/hem edge, module 02 uses `Detail Proof` near the back-view protagonist, and module 03 uses `#SOFT RIB` near the side-view protagonist.
 - Color-weight check: black is the protagonist color for modules 01-03; wine appears only in close-up detail/fabric cards.
 - View coverage: module 01 uses black front view, module 02 uses black back over-shoulder view, and module 03 uses black side view.
 - Rule 19 model-count check: module 01/02/03 each has one assigned black protagonist asset; no extra support model is used in these modules.
-- Detail/fabric uniqueness: module 02 uses independent neckline/button/sleeve close-ups; the fabric swirl macro appears only once in module 03.
+- Detail/fabric uniqueness: module 02 uses independent neckline/button/sleeve close-ups; the fabric swirl macro and stretch proof appear only in module 03.
+- Rule 22 active gaze check: 01-03 uses looking-away, over-shoulder, and focused side-view reads instead of repeating camera-facing smiles.
 - Three-second scan test: title -> protagonist -> tag/card path is continuous in modules 01-03, with no wide vertical blank band over 200px.
 - Verdict: pass after moving script titles away from key headings, removing the overlapping detail note, enlarging the unique module 02/03 protagonists, and moving faces away from slice lines.
 
@@ -47,7 +53,7 @@
 ## Module 06 - Size Chart
 - Source: `modules/module-06-size-chart.html`
 - Output: `output/module-06-size-chart.png`
-- Result: right side now uses a real generated cutout model, not a placeholder or CSS/SVG garment drawing.
+- Result: right side now uses the black generated cutout model for the measurement guide, not a placeholder or CSS/SVG garment drawing.
 - Measurement marks: white dashed BUST / LENGTH / SLEEVE labels are overlaid directly on the model area.
 - Table style: rows use alternating light pink and light camel stripes.
 - Verdict: pass.
@@ -56,6 +62,7 @@
 - Source: `modules/module-07-brand-story.html`
 - Output: `output/module-07-brand-story.png`
 - Result: color cards now use generated cutout model assets from `assets/gen/` instead of direct `assets/color-*.jpg` crops.
+- Layout update: five color cards use slight staggered heights and ±2° rotation, with varied model pose/view assets to reduce same-direction repetition.
 - Verdict: pass.
 
 ## Residual Risk
