@@ -88,7 +88,7 @@
       text-decoration-style: wavy;
       text-decoration-thickness: 3px;
       text-underline-offset: 8px;
-      text-decoration-color: rgba(139,111,85,.62);
+      text-decoration-color: var(--accent);
     }
     .script {
       position: absolute;
@@ -98,7 +98,7 @@
       font-style: italic;
       font-size: 96px;
       line-height: .82;
-      text-shadow: 0 3px 0 rgba(255,255,255,.76);
+      text-shadow: 0 3px 0 #fff;
       pointer-events: none;
     }
     .script.scene { right: 86px; top: 42px; font-size: 96px; transform: rotate(-7deg); }
@@ -116,10 +116,10 @@
       position: absolute;
       z-index: 27;
       margin: 0;
-      color: rgba(31,27,26,.66);
+      color: #4F4640;
       font-family: Georgia, "Times New Roman", serif;
       font-style: italic;
-      font-size: 22px;
+      font-size: 24px;
       line-height: 1.12;
     }
     .serif-note.scene { left: 330px; top: 214px; width: 190px; transform: rotate(-5deg); }
@@ -177,12 +177,12 @@
       background: rgba(255,255,255,.78);
       border: 2px dashed rgba(94,42,53,.38);
       color: var(--primary);
-      font-size: 21px;
+      font-size: 24px;
       letter-spacing: 2px;
       text-transform: uppercase;
     }
-    .tag.one { left: 498px; top: 400px; transform: rotate(-6deg); }
-    .tag.two { right: 264px; top: 260px; transform: rotate(5deg); }
+    .tag.one { left: 300px; top: 430px; transform: rotate(-6deg); }
+    .tag.two { right: 150px; top: 330px; transform: rotate(5deg); }
     .tag.three { left: 82px; top: 1124px; transform: rotate(-5deg); }
     .arrow {
       position: absolute;
@@ -232,7 +232,7 @@
       color: var(--primary);
       background: rgba(255,255,255,.82);
       border: 1px solid rgba(94,42,53,.18);
-      font-size: 18px;
+      font-size: 24px;
       letter-spacing: 1px;
       text-align: center;
       text-transform: uppercase;
@@ -240,12 +240,12 @@
     .spaced-label {
       position: absolute;
       z-index: 26;
-      color: rgba(94,42,53,.72);
-      font-size: 17px;
+      color: var(--primary);
+      font-size: 24px;
       letter-spacing: 7px;
       text-transform: uppercase;
     }
-    .spaced-label.scene { left: 70px; top: 526px; }
+    .spaced-label.scene { left: 70px; top: 526px; letter-spacing: 6px; }
   </style>
 </head>
 <body>
@@ -261,16 +261,16 @@
 
     <h2 class="scene-title">Style It <span class="wave">Your Way</span></h2>
     <div class="script scene">Outfit<br>Notes</div>
-    <p class="copy scene">Wear it tucked, layered, or relaxed. The slim ribbed shape keeps the look neat for everyday plans.</p>
+    <p class="copy scene">Style - Tucked / Layered / Relaxed</p>
     <section class="cutout anchor-duo"><img src="../assets/gen/gen-model-duo-black-front-white-back-01.png" alt="Black front and white back Henley double-model anchor group"></section>
     <div class="tag one">Layer Ready</div>
     <div class="tag two">#OOTD</div>
-    <div class="spaced-label scene">W A L K I N G&nbsp;&nbsp;V I E W</div>
+    <div class="spaced-label scene">F R O N T&nbsp;&nbsp;+&nbsp;&nbsp;B A C K</div>
     <svg class="arrow one" viewBox="0 0 260 130" aria-hidden="true"><path d="M16 90 C82 30 142 24 174 70 C196 102 224 92 242 50"/><path d="M232 48 l18 2 l-9 15"/></svg>
 
     <h2 class="color-title">Find Your <span class="wave">Everyday</span> Shade</h2>
     <div class="script color">Color<br>Story</div>
-    <p class="copy color">Choose a grounded neutral or rich seasonal tone. Each shade keeps the same neckline, buttons, and ribbed texture.</p>
+    <p class="copy color">Five shades. Same neckline, buttons, and rib.</p>
     <div class="swatches" aria-label="Available colors">
       <span class="swatch wine"></span>
       <span class="swatch red"></span>

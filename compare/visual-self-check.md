@@ -33,9 +33,10 @@
 - Slice safety: y=600 falls through the camel divider and the double-anchor group low-detail torso/waist/leg area, not through faces, hands, titles, or color labels. Both model faces remain more than 60px away from the slice line.
 - Layout change: all main models are transparent cutout stickers. The color module uses generated cutout models plus the generated accessory flat-lay group instead of direct product-photo crops.
 - Required decorative elements: one large two-line `Outfit Notes` script title, small `Color Story` script accent, curled dashed arrows, # tags, swatches, and accessory flat-lay are present.
-- Rule 17 typography: uses the expanded-letter `WALKING VIEW` label, 7.5% translucent watermark words, brown + dark gray script accents, and wavy underlines without adding font families; the former `FIVE SHADES` label was removed to prevent text overlap.
+- Rule 17 typography: uses the expanded-letter `FRONT + BACK` label, 7.5% translucent watermark words, brown + dark gray script accents, and wavy underlines without adding font families; the former `FIVE SHADES` label was removed to prevent text overlap.
+- Rule 21 opacity check: watermark text stays at the 7.5% token; background photo layers stay in the 35-45% token; label backgrounds stay in the 70-85% token; readable text and stickers render at 100%.
 - Annotation control: the Style It walking-view italic note and Color Story seated note were removed; no active italic note remains in 04-05.
-- Text-to-model bite check: module 04 uses `LAYER READY` overlapping the black front model body edge and `#OOTD` on the white back model shoulder area; module 05 uses the double-anchor lower-body continuation near the lifted styling capsules and accessory flat-lay.
+- Text-to-model bite check: module 04 uses `LAYER READY` overlapping the black front model outer arm/body edge and `#OOTD` biting into the white back model outer shoulder/arm edge; module 05 uses the double-anchor lower-body continuation near the lifted styling capsules and accessory flat-lay.
 - Layout reduction: original single walking anchor and seated model are removed from the active 04-05 canvas; one black-front/white-back double-model group now carries the central anchor role.
 - Color-weight check: black remains the primary front read while white adds back-view fit proof; color variety is handled by swatches and accessories.
 - Rule 19/20 model-count check: the double-model group is treated as one deliberate cross-slice anchor group; no other model cutout is active in modules 04-05.
