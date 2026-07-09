@@ -63,7 +63,7 @@
     .wm {
       position: absolute;
       z-index: 2;
-      color: rgba(94,42,53,.055);
+      color: rgba(94,42,53,.075);
       font-family: Georgia, "Times New Roman", serif;
       letter-spacing: 11px;
       text-transform: uppercase;
@@ -82,7 +82,14 @@
       color: var(--ink);
     }
     .scene-title { left: 70px; top: 74px; width: 390px; font-size: 58px; line-height: .96; }
-    .color-title { left: 72px; top: 694px; width: 455px; font-size: 54px; line-height: .96; }
+    .color-title { left: 72px; top: 694px; width: 455px; font-size: 54px; line-height: .96; font-weight: 600; }
+    .wave {
+      text-decoration-line: underline;
+      text-decoration-style: wavy;
+      text-decoration-thickness: 3px;
+      text-underline-offset: 8px;
+      text-decoration-color: rgba(139,111,85,.62);
+    }
     .script {
       position: absolute;
       z-index: 12;
@@ -95,7 +102,7 @@
       pointer-events: none;
     }
     .script.scene { right: 86px; top: 42px; font-size: 96px; transform: rotate(-7deg); }
-    .script.color { right: 136px; top: 662px; font-size: 46px; transform: rotate(-7deg); }
+    .script.color { right: 136px; top: 662px; font-size: 46px; color: #4F4640; transform: rotate(-7deg); }
     .copy {
       position: absolute;
       z-index: 25;
@@ -105,6 +112,18 @@
     }
     .copy.scene { left: 74px; top: 252px; width: 360px; }
     .copy.color { left: 76px; top: 884px; width: 360px; }
+    .serif-note {
+      position: absolute;
+      z-index: 27;
+      margin: 0;
+      color: rgba(31,27,26,.66);
+      font-family: Georgia, "Times New Roman", serif;
+      font-style: italic;
+      font-size: 22px;
+      line-height: 1.12;
+    }
+    .serif-note.scene { left: 330px; top: 214px; width: 190px; transform: rotate(-5deg); }
+    .serif-note.color { right: 74px; top: 810px; width: 226px; transform: rotate(4deg); }
     .cutout {
       position: absolute;
       z-index: 18;
@@ -131,11 +150,19 @@
     }
     .support-brown {
       right: 80px;
-      top: 228px;
-      width: 300px;
-      height: 352px;
+      top: 196px;
+      width: 268px;
+      height: 402px;
       z-index: 17;
       transform: rotate(5deg);
+    }
+    .support-back {
+      left: 396px;
+      top: 932px;
+      width: 170px;
+      height: 240px;
+      z-index: 16;
+      transform: rotate(3deg);
     }
     .main-wine {
       left: 552px;
@@ -147,9 +174,9 @@
     }
     .support-red {
       right: 88px;
-      top: 744px;
-      width: 312px;
-      height: 380px;
+      top: 732px;
+      width: 320px;
+      height: 392px;
       z-index: 17;
       transform: rotate(5deg);
     }
@@ -237,6 +264,16 @@
       text-align: center;
       text-transform: uppercase;
     }
+    .spaced-label {
+      position: absolute;
+      z-index: 26;
+      color: rgba(94,42,53,.72);
+      font-size: 17px;
+      letter-spacing: 7px;
+      text-transform: uppercase;
+    }
+    .spaced-label.scene { left: 70px; top: 526px; }
+    .spaced-label.color { left: 76px; top: 966px; }
   </style>
 </head>
 <body>
@@ -247,21 +284,24 @@
     </div>
     <div class="wash"></div>
     <div class="divider"></div>
-    <div class="wm one">OOTD</div>
-    <div class="wm two">COLOR</div>
+    <div class="wm one">GOING OUT</div>
+    <div class="wm two">OOTD</div>
 
-    <h2 class="scene-title">Style It Your Way</h2>
+    <h2 class="scene-title">Style It <span class="wave">Your Way</span></h2>
     <div class="script scene">Outfit<br>Notes</div>
     <p class="copy scene">Wear it tucked, layered, or relaxed. The slim ribbed shape keeps the look neat for everyday plans.</p>
+    <p class="serif-note scene">side view keeps the slim rib fit readable</p>
     <section class="cutout anchor-white"><img src="../assets/gen/gen-portrait-white-01.png" alt="White Henley anchor portrait"></section>
-    <section class="cutout support-brown"><img src="../assets/gen/gen-model-brown-01.png" alt="Brown Henley support full-body model"></section>
+    <section class="cutout support-brown"><img src="../assets/gen/gen-model-wine-side-01.png" alt="Wine Henley side-view support model"></section>
     <div class="tag one">Layer Ready</div>
     <div class="tag two">#OOTD</div>
+    <div class="spaced-label scene">S I D E&nbsp;&nbsp;V I E W</div>
     <svg class="arrow one" viewBox="0 0 260 130" aria-hidden="true"><path d="M16 90 C82 30 142 24 174 70 C196 102 224 92 242 50"/><path d="M232 48 l18 2 l-9 15"/></svg>
 
-    <h2 class="color-title">Find Your Everyday Shade</h2>
+    <h2 class="color-title">Find Your <span class="wave">Everyday</span> Shade</h2>
     <div class="script color">Color<br>Story</div>
     <p class="copy color">Choose a grounded neutral or rich seasonal tone. Each shade keeps the same neckline, buttons, and ribbed texture.</p>
+    <p class="serif-note color">front, back, and seated views keep the story moving</p>
     <div class="swatches" aria-label="Available colors">
       <span class="swatch wine"></span>
       <span class="swatch red"></span>
@@ -269,10 +309,12 @@
       <span class="swatch brown"></span>
       <span class="swatch black"></span>
     </div>
+    <section class="cutout support-back"><img src="../assets/gen/gen-model-white-back-01.png" alt="White Henley back-view support model"></section>
     <section class="cutout main-wine"><img src="../assets/gen/gen-portrait-wine-01.png" alt="Wine Henley color protagonist portrait"></section>
-    <section class="cutout support-red"><img src="../assets/gen/gen-model-red-01.png" alt="Red Henley support seated model"></section>
+    <section class="cutout support-red"><img src="../assets/gen/gen-model-red-sit-02.png" alt="Red Henley seated support model"></section>
     <section class="accessory"><img src="../assets/gen/gen-accessory-neutral-01.png" alt="Jeans handbag earrings shoes sunglasses styling flat lay"></section>
     <div class="tag three">#COLOR DROP</div>
+    <div class="spaced-label color">F I V E&nbsp;&nbsp;S H A D E S</div>
     <svg class="arrow two" viewBox="0 0 260 130" aria-hidden="true"><path d="M18 90 C76 38 132 34 160 72 C184 105 220 96 244 58"/><path d="M235 55 l17 4 l-11 13"/></svg>
     <section class="notes" aria-label="Styling notes">
       <div class="note">Tuck or Layer</div>

@@ -65,7 +65,7 @@
     .wm {
       position: absolute;
       z-index: 2;
-      color: rgba(94,42,53,.055);
+      color: rgba(94,42,53,.075);
       font-family: Georgia, "Times New Roman", serif;
       font-size: 170px;
       letter-spacing: 10px;
@@ -92,8 +92,15 @@
       text-transform: uppercase;
     }
     .hero-title { left: 70px; top: 154px; width: 460px; font-size: 58px; line-height: .95; }
-    .detail-title { left: 548px; top: 690px; width: 344px; font-size: 50px; line-height: .96; }
-    .fabric-title { left: 74px; top: 1286px; width: 430px; font-size: 58px; line-height: .96; }
+    .detail-title { left: 548px; top: 690px; width: 344px; font-size: 50px; line-height: .96; color: #262120; }
+    .fabric-title { left: 74px; top: 1286px; width: 430px; font-size: 62px; line-height: .94; color: #171413; }
+    .wave {
+      text-decoration-line: underline;
+      text-decoration-style: wavy;
+      text-decoration-thickness: 3px;
+      text-underline-offset: 8px;
+      text-decoration-color: rgba(139,111,85,.62);
+    }
     .script {
       position: absolute;
       z-index: 17;
@@ -106,7 +113,7 @@
       pointer-events: none;
     }
     .script.hero { left: 544px; top: 104px; font-size: 98px; transform: rotate(-7deg); z-index: 23; }
-    .script.detail { left: 128px; top: 626px; font-size: 50px; transform: rotate(-5deg); }
+    .script.detail { left: 128px; top: 626px; font-size: 50px; color: #4F4640; transform: rotate(-5deg); }
     .script.fabric { left: 704px; top: 1268px; font-size: 44px; transform: rotate(-8deg); }
     .copy {
       position: absolute;
@@ -118,6 +125,19 @@
     .copy.hero { left: 74px; top: 398px; width: 405px; }
     .copy.detail { right: 68px; top: 694px; width: 320px; text-align: right; font-size: 22px; }
     .copy.fabric { left: 78px; top: 1498px; width: 300px; }
+    .serif-note {
+      position: absolute;
+      z-index: 27;
+      margin: 0;
+      color: rgba(31,27,26,.66);
+      font-family: Georgia, "Times New Roman", serif;
+      font-style: italic;
+      font-size: 22px;
+      line-height: 1.12;
+    }
+    .serif-note.hero { left: 812px; top: 292px; width: 190px; transform: rotate(-5deg); }
+    .serif-note.detail { left: 860px; top: 808px; width: 210px; transform: rotate(4deg); }
+    .serif-note.fabric { right: 90px; top: 1702px; width: 250px; text-align: right; transform: rotate(2deg); }
     .cutout {
       position: absolute;
       z-index: 18;
@@ -242,8 +262,18 @@
       background: rgba(255,255,255,.82);
       border: 1px solid rgba(94,42,53,.20);
       font-size: 18px;
+      letter-spacing: 2px;
       text-align: center;
     }
+    .spaced-label {
+      position: absolute;
+      z-index: 26;
+      color: rgba(94,42,53,.72);
+      font-size: 17px;
+      letter-spacing: 7px;
+      text-transform: uppercase;
+    }
+    .spaced-label.fabric { left: 702px; top: 1696px; }
   </style>
 </head>
 <body>
@@ -255,16 +285,17 @@
     <div class="wash"></div>
     <div class="band one"></div>
     <div class="band two"></div>
-    <div class="wm one">ELARAISE</div>
+    <div class="wm one">GOING OUT</div>
     <div class="wm two">DETAIL</div>
     <div class="wm three">TEXTURE</div>
     <img class="logo" src="../assets/logo.svg" alt="ELARAISE">
 
-    <h1 class="hero-title">Elevated Henley Essential</h1>
+    <h1 class="hero-title">Elevated <span class="wave">Henley</span> Essential</h1>
     <div class="script hero">Henley<br>Mood</div>
     <p class="copy hero">A ribbed long sleeve top with a notched V neckline, two-button detail, and an easy slim fit.</p>
     <section class="cutout anchor-wine"><img src="../assets/gen/gen-portrait-wine-01.png" alt="Wine Henley anchor portrait"></section>
     <section class="card c-neck"><img src="../assets/gen/gen-detail-wine-01.png" alt="Henley neckline and buttons"><span>Two-Button Henley</span></section>
+    <p class="serif-note hero">notched split neckline, clean everyday fit</p>
     <div class="tag hero">#OOTD</div>
     <svg class="arrow one" viewBox="0 0 240 120" aria-hidden="true"><path d="M12 78 C70 18 122 18 170 58 C190 74 208 72 222 50"/><path d="M214 50 l18 0 l-8 16"/></svg>
 
@@ -277,15 +308,18 @@
     <section class="card c-rib"><img src="../assets/gen/gen-detail-wine-02.png" alt="Ribbed knit macro"><span>Ribbed Knit</span></section>
     <section class="card c-button"><img src="../assets/gen/gen-detail-wine-01.png" alt="Two button macro"><span>Notched V Neck</span></section>
     <section class="card c-sleeve"><img src="../assets/gen/gen-detail-wine-03.png" alt="Long sleeve cuff macro"><span>Long Sleeves</span></section>
+    <p class="serif-note detail">marble-look buttons stay visible at first glance</p>
 
     <section class="cutout main-red"><img src="../assets/gen/gen-portrait-red-01.png" alt="Red Henley fabric protagonist portrait"></section>
-    <h2 class="fabric-title">Soft Stretch Feel</h2>
+    <h2 class="fabric-title">Soft <span class="wave">Stretch</span> Feel</h2>
     <div class="script fabric">Soft<br>Touch</div>
     <p class="copy fabric">Smooth ribbed knit moves with you and keeps a lightweight feel for solo wear or layering.</p>
     <svg class="arrow three" viewBox="0 0 240 120" aria-hidden="true"><path d="M18 88 C82 28 142 24 164 70 C178 98 204 96 224 58"/><path d="M214 54 l18 3 l-10 14"/></svg>
     <section class="card c-fabric"><img src="../assets/gen/gen-detail-wine-02.png" alt="Soft ribbed fabric macro"><span>Fabric Display</span></section>
+    <p class="serif-note fabric">smooth rib texture with easy stretch</p>
     <section class="cutout support-black"><img src="../assets/gen/gen-model-black-01.png" alt="Black Henley support full-body model"></section>
     <div class="tag fabric">#SOFT RIB</div>
+    <div class="spaced-label fabric">F A B R I C&nbsp;&nbsp;D I S P L A Y</div>
     <section class="proofs" aria-label="Fabric attributes">
       <div class="proof">95% Viscose</div>
       <div class="proof">5% Spandex</div>
