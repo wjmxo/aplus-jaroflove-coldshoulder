@@ -129,14 +129,20 @@
 
     .product-photo {
       position: absolute;
-      left: 10px;
-      right: 10px;
-      top: 10px;
-      height: 250px;
-      width: calc(100% - 20px);
-      object-fit: cover;
-      object-position: center top;
-      background: #E1DED8;
+      left: 4px;
+      right: 4px;
+      top: 0;
+      height: 278px;
+      width: calc(100% - 8px);
+      object-fit: contain;
+      object-position: center bottom;
+      background: transparent;
+      filter:
+        drop-shadow(5px 0 0 #fff)
+        drop-shadow(-5px 0 0 #fff)
+        drop-shadow(0 5px 0 #fff)
+        drop-shadow(0 -5px 0 #fff)
+        drop-shadow(0 10px 14px rgba(72,52,38,.16));
     }
 
     .label {
@@ -182,27 +188,27 @@
 
     <section class="swatch-stage" aria-label="Five color display">
       <article class="color-card" style="--color: var(--white)">
-        <img class="product-photo" src="../assets/color-white.jpg" alt="White ELARAISE Henley top">
+        <img class="product-photo" src="../assets/gen/gen-model-white-01.png" alt="White ELARAISE Henley top">
         <div class="dots"><span class="dot"></span></div>
         <div class="label">White</div>
       </article>
       <article class="color-card" style="--color: var(--red)">
-        <img class="product-photo" src="../assets/color-red.jpg" alt="Red ELARAISE Henley top">
+        <img class="product-photo" src="../assets/gen/gen-model-red-01.png" alt="Red ELARAISE Henley top">
         <div class="dots"><span class="dot"></span></div>
         <div class="label">Red</div>
       </article>
       <article class="color-card" style="--color: var(--wine)">
-        <img class="product-photo" src="../assets/color-wine.jpg" alt="Wine ELARAISE Henley top">
+        <img class="product-photo" src="../assets/gen/gen-model-wine-01.png" alt="Wine ELARAISE Henley top">
         <div class="dots"><span class="dot"></span></div>
         <div class="label">Wine</div>
       </article>
       <article class="color-card" style="--color: var(--brown)">
-        <img class="product-photo" src="../assets/color-brown.jpg" alt="Brown ELARAISE Henley top">
+        <img class="product-photo" src="../assets/gen/gen-model-brown-01.png" alt="Brown ELARAISE Henley top">
         <div class="dots"><span class="dot"></span></div>
         <div class="label">Brown</div>
       </article>
       <article class="color-card" style="--color: var(--black)">
-        <img class="product-photo" src="../assets/color-black.jpg" alt="Black ELARAISE Henley top">
+        <img class="product-photo" src="../assets/gen/gen-model-black-01.png" alt="Black ELARAISE Henley top">
         <div class="dots"><span class="dot"></span></div>
         <div class="label">Black</div>
       </article>

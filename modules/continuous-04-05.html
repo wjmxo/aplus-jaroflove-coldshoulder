@@ -7,280 +7,237 @@
   <style>
     :root {
       --primary: #5E2A35;
-      --accent: #B08D6E;
-      --bg: #F4F2EE;
-      --warm: #C9B9A3;
-      --text: #1F1B1A;
-      --muted: #756E68;
+      --accent: #8B6F55;
+      --camel: #C9B9A3;
+      --cream: #F4F2EE;
+      --ink: #1F1B1A;
+      --muted: #746B65;
+      --pink: #E9D7D4;
     }
-
     * { box-sizing: border-box; }
     body {
       width: 1464px;
       height: 1200px;
       margin: 0;
       overflow: hidden;
-      background: var(--bg);
-      color: var(--text);
+      background: var(--cream);
+      color: var(--ink);
       font-family: Arial, Helvetica, sans-serif;
     }
-
     .canvas {
       position: relative;
       width: 1464px;
       height: 1200px;
       overflow: hidden;
-      background:
-        linear-gradient(100deg, rgba(94,42,53,.12) 0 24%, transparent 24% 100%),
-        linear-gradient(180deg, #EFE7DB 0%, #F4F2EE 51%, #E8DFD1 100%);
+      background: #F4F2EE;
     }
-
-    .slice-gap {
+    .bg img {
       position: absolute;
-      left: 0;
-      top: 578px;
-      width: 1464px;
-      height: 48px;
-      background: rgba(201,185,163,.92);
-      z-index: 8;
+      width: 100%;
+      height: 650px;
+      object-fit: cover;
+      opacity: .36;
+      filter: blur(1px) saturate(.86);
+      z-index: 0;
     }
-
-    .watermark {
+    .bg .street { top: 0; }
+    .bg .interior { top: 556px; opacity: .42; }
+    .wash {
       position: absolute;
+      inset: 0;
       z-index: 1;
-      color: rgba(94,42,53,.07);
+      background:
+        linear-gradient(90deg, rgba(244,242,238,.94) 0 28%, rgba(244,242,238,.45) 58%, rgba(244,242,238,.80) 100%),
+        radial-gradient(circle at 38% 68%, rgba(233,215,212,.72), transparent 34%),
+        radial-gradient(circle at 76% 24%, rgba(201,185,163,.55), transparent 30%);
+    }
+    .divider {
+      position: absolute;
+      left: -40px;
+      top: 566px;
+      width: 1540px;
+      height: 86px;
+      z-index: 3;
+      background: rgba(201,185,163,.92);
+      transform: rotate(1.1deg);
+    }
+    .wm {
+      position: absolute;
+      z-index: 2;
+      color: rgba(94,42,53,.055);
       font-family: Georgia, "Times New Roman", serif;
       text-transform: uppercase;
       pointer-events: none;
-      letter-spacing: 12px;
+      letter-spacing: 11px;
     }
-
-    .wm-scene { left: 28px; top: 82px; font-size: 172px; }
-    .wm-color { right: 18px; top: 692px; font-size: 164px; }
-
+    .wm.one { left: 26px; top: 84px; font-size: 160px; }
+    .wm.two { right: 18px; top: 714px; font-size: 154px; }
     h2 {
+      position: absolute;
+      z-index: 20;
       margin: 0;
       font-family: Georgia, "Times New Roman", serif;
       font-weight: 500;
-      letter-spacing: 3px;
+      letter-spacing: 2px;
       text-transform: uppercase;
+      color: var(--ink);
     }
-
-    .scene-photo {
-      position: absolute;
-      left: -26px;
-      top: 24px;
-      width: 1516px;
-      height: 532px;
-      z-index: 2;
-      overflow: hidden;
-      border-radius: 0;
-      box-shadow: 0 18px 40px rgba(72,52,38,.16);
-    }
-
-    .scene-photo img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center 42%;
-      display: block;
-      filter: saturate(.98) contrast(1.02);
-    }
-
-    .scene-shade {
-      position: absolute;
-      left: -26px;
-      top: 24px;
-      width: 1516px;
-      height: 532px;
-      z-index: 3;
-      background:
-        linear-gradient(90deg, rgba(244,242,238,.92) 0%, rgba(244,242,238,.54) 23%, rgba(244,242,238,.02) 52%, rgba(94,42,53,.18) 100%),
-        linear-gradient(0deg, rgba(31,27,26,.12), rgba(31,27,26,0) 38%);
-      pointer-events: none;
-    }
-
     .scene-title {
-      position: absolute;
-      left: 68px;
-      top: 72px;
-      width: 420px;
-      z-index: 7;
-      font-size: 62px;
-      line-height: .98;
+      left: 70px;
+      top: 76px;
+      width: 390px;
+      font-size: 58px;
+      line-height: .96;
     }
-
-    .scene-copy {
-      position: absolute;
+    .color-title {
       left: 72px;
-      top: 248px;
-      width: 380px;
-      z-index: 7;
-      color: var(--muted);
-      font-size: 25px;
-      line-height: 1.3;
+      top: 710px;
+      width: 420px;
+      font-size: 56px;
+      line-height: .96;
     }
-
-    .scene-script,
-    .color-script {
+    .script-title {
       position: absolute;
-      z-index: 9;
-      color: rgba(176,141,110,.95);
+      z-index: 13;
+      color: var(--accent);
       font-family: Georgia, "Times New Roman", serif;
       font-style: italic;
-      text-shadow: 0 2px 0 rgba(255,255,255,.72);
-    }
-
-    .scene-script {
-      right: 86px;
-      top: 52px;
-      font-size: 96px;
+      font-size: 100px;
+      line-height: .82;
+      text-shadow: 0 3px 0 rgba(255,255,255,.74);
       transform: rotate(-8deg);
     }
-
-    .dash {
+    .script-title.scene { right: 102px; top: 50px; }
+    .script-title.color { left: 430px; top: 692px; }
+    .copy {
       position: absolute;
-      z-index: 9;
-      border-top: 3px dashed rgba(94,42,53,.48);
-      transform-origin: left center;
+      z-index: 21;
+      color: var(--muted);
+      font-size: 25px;
+      line-height: 1.28;
     }
-
-    .dash.one {
-      left: 436px;
-      top: 394px;
-      width: 210px;
-      transform: rotate(-11deg);
-    }
-
-    .dash.one::after {
-      content: "";
+    .copy.scene { left: 74px; top: 254px; width: 360px; }
+    .copy.color { left: 76px; top: 884px; width: 360px; }
+    .cutout {
       position: absolute;
-      right: -5px;
-      top: -8px;
-      width: 15px;
-      height: 15px;
-      border-right: 3px solid rgba(94,42,53,.48);
-      border-top: 3px solid rgba(94,42,53,.48);
-      transform: rotate(45deg);
+      z-index: 14;
+      filter:
+        drop-shadow(10px 0 0 #fff)
+        drop-shadow(-10px 0 0 #fff)
+        drop-shadow(0 10px 0 #fff)
+        drop-shadow(0 -10px 0 #fff)
+        drop-shadow(0 20px 26px rgba(72,52,38,.22));
     }
-
+    .cutout img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+    }
+    .model-white {
+      left: 432px;
+      top: -30px;
+      width: 410px;
+      height: 670px;
+      transform: rotate(-4deg);
+    }
+    .model-brown {
+      right: 318px;
+      top: 68px;
+      width: 360px;
+      height: 560px;
+      transform: rotate(4deg);
+      z-index: 15;
+    }
+    .model-black {
+      right: 54px;
+      top: 28px;
+      width: 338px;
+      height: 594px;
+      transform: rotate(-2deg);
+      z-index: 16;
+    }
+    .model-wine {
+      left: 500px;
+      top: 644px;
+      width: 360px;
+      height: 540px;
+      transform: rotate(-5deg);
+      z-index: 15;
+    }
+    .model-red {
+      left: 764px;
+      top: 684px;
+      width: 350px;
+      height: 500px;
+      transform: rotate(5deg);
+      z-index: 16;
+    }
+    .model-mini-brown {
+      right: 78px;
+      top: 700px;
+      width: 330px;
+      height: 520px;
+      transform: rotate(-3deg);
+      z-index: 15;
+    }
+    .accessory {
+      position: absolute;
+      left: 78px;
+      top: 996px;
+      width: 360px;
+      height: 190px;
+      z-index: 20;
+      transform: rotate(-6deg);
+      filter:
+        drop-shadow(7px 0 0 #fff)
+        drop-shadow(-7px 0 0 #fff)
+        drop-shadow(0 7px 0 #fff)
+        drop-shadow(0 -7px 0 #fff)
+        drop-shadow(0 16px 22px rgba(72,52,38,.20));
+    }
+    .accessory img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+    }
     .tag {
       position: absolute;
-      z-index: 10;
+      z-index: 24;
       padding: 9px 18px;
       border-radius: 999px;
-      background: rgba(255,255,255,.70);
-      border: 2px dashed rgba(94,42,53,.34);
+      background: rgba(255,255,255,.75);
+      border: 2px dashed rgba(94,42,53,.38);
       color: var(--primary);
       font-size: 21px;
       letter-spacing: 2px;
       text-transform: uppercase;
     }
-
-    .tag.ootd { right: 108px; top: 462px; transform: rotate(5deg); }
-    .tag.layer { left: 510px; top: 90px; transform: rotate(-4deg); }
-    .tag.color { left: 78px; top: 1090px; transform: rotate(-4deg); }
-
-    .mini-feed {
+    .tag.one { left: 352px; top: 394px; transform: rotate(-6deg); }
+    .tag.two { right: 116px; top: 482px; transform: rotate(5deg); }
+    .tag.three { left: 72px; top: 1112px; transform: rotate(-5deg); }
+    .arrow {
       position: absolute;
-      right: 310px;
-      top: 356px;
-      z-index: 9;
-      width: 238px;
-      height: 160px;
-      padding: 10px;
-      background: rgba(255,255,255,.86);
-      border-radius: 8px;
-      box-shadow: 0 14px 34px rgba(72,52,38,.18);
-      transform: rotate(-3deg);
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 8px;
+      z-index: 24;
+      width: 260px;
+      height: 130px;
+      fill: none;
+      stroke: rgba(94,42,53,.54);
+      stroke-width: 4;
+      stroke-linecap: round;
+      stroke-dasharray: 9 10;
     }
-
-    .mini-feed img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center top;
-      border-radius: 5px;
-      display: block;
-    }
-
-    .color-title {
-      position: absolute;
-      left: 72px;
-      top: 704px;
-      width: 410px;
-      z-index: 8;
-      font-size: 58px;
-      line-height: .98;
-    }
-
-    .color-copy {
-      position: absolute;
-      left: 76px;
-      top: 858px;
-      width: 350px;
-      z-index: 8;
-      color: var(--muted);
-      font-size: 24px;
-      line-height: 1.28;
-    }
-
-    .color-script {
-      left: 520px;
-      top: 846px;
-      font-size: 78px;
-      transform: rotate(-8deg);
-    }
-
-    .sticker {
-      position: absolute;
-      z-index: 7;
-      padding: 10px 10px 42px;
-      background: #fff;
-      border-radius: 7px;
-      box-shadow: 0 16px 36px rgba(72,52,38,.18);
-      overflow: hidden;
-    }
-
-    .sticker img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center top;
-      display: block;
-    }
-
-    .sticker span {
-      position: absolute;
-      left: 0;
-      right: 0;
-      bottom: 10px;
-      color: var(--primary);
-      text-align: center;
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 17px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-    }
-
-    .s-wine { left: 498px; top: 650px; width: 272px; height: 386px; transform: rotate(-5deg); z-index: 8; }
-    .s-red { left: 704px; top: 706px; width: 252px; height: 360px; transform: rotate(4deg); z-index: 9; }
-    .s-white { left: 900px; top: 638px; width: 270px; height: 394px; transform: rotate(-2deg); z-index: 8; }
-    .s-brown { right: 118px; top: 728px; width: 252px; height: 354px; transform: rotate(5deg); z-index: 9; }
-    .s-black { right: -8px; top: 870px; width: 242px; height: 330px; transform: rotate(-4deg); z-index: 8; }
-
+    .arrow.one { left: 326px; top: 318px; transform: rotate(-12deg); }
+    .arrow.two { left: 368px; top: 858px; transform: rotate(8deg); }
     .swatches {
       position: absolute;
-      left: 72px;
-      top: 1018px;
-      z-index: 8;
+      left: 74px;
+      top: 806px;
+      z-index: 22;
       display: flex;
       gap: 14px;
     }
-
     .swatch {
       width: 54px;
       height: 54px;
@@ -288,67 +245,57 @@
       border: 5px solid #fff;
       box-shadow: 0 8px 18px rgba(72,52,38,.18);
     }
-
     .wine { background: #5E2A35; }
-    .red { background: #904341; }
+    .red { background: #A2403E; }
     .white { background: #F8F4EE; }
     .brown { background: #7A5544; }
     .black { background: #22201F; }
-
     .notes {
       position: absolute;
-      left: 0;
-      right: 0;
+      left: 456px;
       bottom: 34px;
-      z-index: 10;
+      z-index: 26;
       display: flex;
-      justify-content: center;
-      gap: 28px;
+      gap: 18px;
     }
-
     .note {
-      min-width: 176px;
+      min-width: 166px;
       padding: 12px 18px;
       border-radius: 999px;
       color: var(--primary);
-      background: rgba(255,255,255,.76);
-      border: 1px solid rgba(94,42,53,.22);
+      background: rgba(255,255,255,.80);
+      border: 1px solid rgba(94,42,53,.18);
       font-size: 18px;
-      text-align: center;
       letter-spacing: 1px;
+      text-align: center;
       text-transform: uppercase;
     }
   </style>
 </head>
 <body>
   <main class="canvas" aria-label="ELARAISE continuous modules 04 to 05">
-    <div class="watermark wm-scene">OOTD</div>
-    <div class="watermark wm-color">COLOR</div>
-    <div class="scene-photo">
-      <img src="../assets/scenarios-04.png" alt="Four lifestyle ways to wear the ELARAISE Henley top">
+    <div class="bg" aria-hidden="true">
+      <img class="street" src="../assets/gen/gen-bg-warm-01.png" alt="">
+      <img class="interior" src="../assets/gen/gen-bg-warm-02.png" alt="">
     </div>
-    <div class="scene-shade"></div>
-    <h2 class="scene-title">STYLE IT YOUR WAY</h2>
-    <p class="scene-copy">Wear it tucked, layered, or relaxed. The slim ribbed shape keeps the look neat from weekday errands to coffee plans.</p>
-    <div class="scene-script">Outfits</div>
-    <div class="tag layer">Layer Ready</div>
-    <div class="tag ootd">#OOTD</div>
-    <div class="dash one"></div>
-    <div class="mini-feed">
-      <img src="../assets/color-wine.jpg" alt="Wine Henley close crop">
-      <img src="../assets/color-white.jpg" alt="White Henley close crop">
-    </div>
-    <div class="slice-gap" aria-hidden="true"></div>
+    <div class="wash"></div>
+    <div class="divider"></div>
+    <div class="wm one">OOTD</div>
+    <div class="wm two">COLOR</div>
 
-    <h2 class="color-title">FIND YOUR EVERYDAY SHADE</h2>
-    <p class="color-copy">Choose a grounded neutral or a rich seasonal tone. Each color keeps the same notched neckline and ribbed texture.</p>
-    <div class="color-script">color drop</div>
-    <div class="tag color">#COLOR DROP</div>
-    <section class="sticker s-wine"><img src="../assets/color-wine.jpg" alt="Wine color Henley"><span>Wine</span></section>
-    <section class="sticker s-red"><img src="../assets/color-red.jpg" alt="Red color Henley"><span>Red</span></section>
-    <section class="sticker s-white"><img src="../assets/color-white.jpg" alt="White color Henley"><span>White</span></section>
-    <section class="sticker s-brown"><img src="../assets/color-brown.jpg" alt="Brown color Henley"><span>Brown</span></section>
-    <section class="sticker s-black"><img src="../assets/color-black.jpg" alt="Black color Henley"><span>Black</span></section>
+    <h2 class="scene-title">Style It Your Way</h2>
+    <div class="script-title scene">Outfit<br>Notes</div>
+    <p class="copy scene">Wear it tucked, layered, or relaxed. The slim ribbed shape keeps the look neat for everyday plans.</p>
+    <section class="cutout model-white"><img src="../assets/gen/gen-model-white-01.png" alt="White Henley cutout model"></section>
+    <section class="cutout model-brown"><img src="../assets/gen/gen-model-brown-01.png" alt="Brown Henley cafe cutout model"></section>
+    <section class="cutout model-black"><img src="../assets/gen/gen-model-black-01.png" alt="Black Henley office cutout model"></section>
+    <div class="tag one">Layer Ready</div>
+    <div class="tag two">#OOTD</div>
+    <svg class="arrow one" viewBox="0 0 260 130" aria-hidden="true"><path d="M16 90 C82 30 142 24 174 70 C196 102 224 92 242 50"/><path d="M232 48 l18 2 l-9 15"/></svg>
+
+    <h2 class="color-title">Find Your Everyday Shade</h2>
+    <div class="script-title color">Color<br>Story</div>
+    <p class="copy color">Choose a grounded neutral or rich seasonal tone. Each shade keeps the same neckline, buttons, and ribbed texture.</p>
     <div class="swatches" aria-label="Available colors">
       <span class="swatch wine"></span>
       <span class="swatch red"></span>
@@ -356,10 +303,16 @@
       <span class="swatch brown"></span>
       <span class="swatch black"></span>
     </div>
+    <section class="cutout model-wine"><img src="../assets/gen/gen-model-wine-01.png" alt="Wine Henley cutout model"></section>
+    <section class="cutout model-red"><img src="../assets/gen/gen-model-red-01.png" alt="Red Henley seated cutout model"></section>
+    <section class="cutout model-mini-brown"><img src="../assets/gen/gen-model-brown-01.png" alt="Brown Henley color cutout model"></section>
+    <section class="accessory"><img src="../assets/gen/gen-accessory-neutral-01.png" alt="Jeans handbag earrings shoes sunglasses styling flat lay"></section>
+    <div class="tag three">#COLOR DROP</div>
+    <svg class="arrow two" viewBox="0 0 260 130" aria-hidden="true"><path d="M18 90 C76 38 132 34 160 72 C184 105 220 96 244 58"/><path d="M235 55 l17 4 l-11 13"/></svg>
     <section class="notes" aria-label="Styling notes">
-      <div class="note">Slim Ribbed Fit</div>
       <div class="note">Tuck or Layer</div>
-      <div class="note">Five Easy Colors</div>
+      <div class="note">Five Colors</div>
+      <div class="note">Easy Denim Pairing</div>
     </section>
   </main>
 </body>

@@ -7,172 +7,236 @@
   <style>
     :root {
       --primary: #5E2A35;
-      --accent: #B08D6E;
-      --bg: #F4F2EE;
-      --warm: #C9B9A3;
-      --text: #1F1B1A;
-      --muted: #756E68;
+      --accent: #8B6F55;
+      --camel: #C9B9A3;
+      --cream: #F4F2EE;
+      --ink: #1F1B1A;
+      --muted: #746B65;
+      --pink: #E9D7D4;
     }
-
     * { box-sizing: border-box; }
     body {
       width: 1464px;
       height: 1800px;
       margin: 0;
       overflow: hidden;
-      background: var(--bg);
-      color: var(--text);
+      background: var(--cream);
+      color: var(--ink);
       font-family: Arial, Helvetica, sans-serif;
     }
-
     .canvas {
       position: relative;
       width: 1464px;
       height: 1800px;
-      background:
-        radial-gradient(circle at 18% 8%, rgba(255,255,255,.92), transparent 24%),
-        radial-gradient(circle at 88% 42%, rgba(255,255,255,.62), transparent 24%),
-        linear-gradient(180deg, #F4F2EE 0%, #EFE7DB 55%, #F4F2EE 100%);
+      overflow: hidden;
+      background: #F4F2EE;
+    }
+    .bg {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
       overflow: hidden;
     }
-
-    .soft-band {
+    .bg img {
       position: absolute;
-      left: 0;
-      right: 0;
-      top: 558px;
-      height: 92px;
-      background: rgba(201,185,163,.94);
-      z-index: 4;
+      width: 100%;
+      height: 650px;
+      object-fit: cover;
+      opacity: .34;
+      filter: blur(1px) saturate(.86);
     }
-
-    .soft-band.bottom {
-      top: 1170px;
-      height: 86px;
-      opacity: .78;
-    }
-
-    .logo {
+    .bg .street { top: 0; }
+    .bg .interior { top: 1138px; opacity: .40; }
+    .wash {
       position: absolute;
-      left: 74px;
-      top: 66px;
-      width: 198px;
-      z-index: 12;
-    }
-
-    .watermark {
-      position: absolute;
+      inset: 0;
       z-index: 1;
-      color: rgba(94,42,53,.06);
+      background:
+        linear-gradient(90deg, rgba(244,242,238,.96) 0 34%, rgba(244,242,238,.50) 60%, rgba(244,242,238,.22) 100%),
+        radial-gradient(circle at 78% 18%, rgba(201,185,163,.50), transparent 32%),
+        radial-gradient(circle at 24% 74%, rgba(233,215,212,.55), transparent 28%);
+    }
+    .band {
+      position: absolute;
+      left: -30px;
+      width: 1540px;
+      height: 112px;
+      z-index: 2;
+      background: rgba(201,185,163,.90);
+      transform: rotate(-1.5deg);
+    }
+    .band.one { top: 548px; }
+    .band.two { top: 1160px; opacity: .86; transform: rotate(1.3deg); }
+    .wm {
+      position: absolute;
+      z-index: 2;
+      color: rgba(94,42,53,.055);
       font-family: Georgia, "Times New Roman", serif;
-      font-size: 178px;
-      letter-spacing: 13px;
+      font-size: 176px;
+      letter-spacing: 11px;
       text-transform: uppercase;
       pointer-events: none;
     }
-
-    .wm-hero { left: 458px; top: 10px; }
-    .wm-detail { left: 24px; top: 704px; font-size: 156px; }
-    .wm-fabric { right: 12px; top: 1236px; font-size: 150px; }
-
+    .wm.one { left: 438px; top: 30px; }
+    .wm.two { left: 34px; top: 680px; font-size: 156px; }
+    .wm.three { right: 20px; top: 1280px; font-size: 156px; }
+    .logo {
+      position: absolute;
+      left: 72px;
+      top: 62px;
+      width: 190px;
+      z-index: 20;
+    }
     h1, h2 {
       margin: 0;
       font-family: Georgia, "Times New Roman", serif;
       font-weight: 500;
-      letter-spacing: 3px;
+      letter-spacing: 2px;
       text-transform: uppercase;
     }
-
-    .hero-title {
+    .serif-hero {
       position: absolute;
       left: 70px;
-      top: 160px;
-      width: 560px;
-      z-index: 12;
-      font-size: 66px;
+      top: 155px;
+      z-index: 20;
+      width: 470px;
+      font-size: 58px;
       line-height: .95;
     }
-
-    .hero-script {
+    .script-title {
       position: absolute;
-      left: 410px;
-      top: 154px;
-      z-index: 13;
+      z-index: 18;
       color: var(--accent);
       font-family: Georgia, "Times New Roman", serif;
-      font-size: 82px;
       font-style: italic;
-      line-height: 1;
+      font-weight: 500;
+      line-height: .82;
+      text-shadow: 0 3px 0 rgba(255,255,255,.72);
+      transform: rotate(-7deg);
+    }
+    .script-title.hero {
+      left: 360px;
+      top: 112px;
+      font-size: 96px;
+      z-index: 22;
+    }
+    .script-title.detail {
+      left: 120px;
+      top: 628px;
+      font-size: 92px;
+      transform: rotate(-5deg);
+    }
+    .script-title.fabric {
+      right: 118px;
+      top: 1258px;
+      font-size: 102px;
       transform: rotate(-8deg);
-      text-shadow: 0 2px 0 rgba(255,255,255,.72);
     }
-
-    .hero-copy {
+    .copy {
       position: absolute;
-      left: 72px;
-      top: 402px;
-      width: 430px;
-      z-index: 12;
+      z-index: 20;
       color: var(--muted);
-      font-size: 27px;
-      line-height: 1.32;
+      font-size: 26px;
+      line-height: 1.28;
     }
-
-    .hero-photo {
+    .copy.hero { left: 74px; top: 394px; width: 420px; }
+    .copy.fabric { left: 78px; top: 1496px; width: 420px; }
+    .cutout {
       position: absolute;
-      right: -22px;
-      top: 26px;
-      width: 910px;
-      height: 704px;
-      border: 13px solid rgba(255,255,255,.90);
-      border-radius: 350px 350px 8px 8px;
-      overflow: hidden;
-      box-shadow: 0 18px 42px rgba(68,52,38,.16);
-      z-index: 2;
+      z-index: 15;
+      filter:
+        drop-shadow(10px 0 0 #fff)
+        drop-shadow(-10px 0 0 #fff)
+        drop-shadow(0 10px 0 #fff)
+        drop-shadow(0 -10px 0 #fff)
+        drop-shadow(0 20px 26px rgba(72,52,38,.22));
     }
-
-    .hero-photo img {
+    .cutout img {
       width: 100%;
       height: 100%;
-      object-fit: cover;
-      object-position: 70% center;
+      object-fit: contain;
       display: block;
     }
-
-    .fade-left {
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 49%;
-      height: 650px;
-      z-index: 3;
-      background: linear-gradient(90deg, #F4F2EE 0%, rgba(244,242,238,.96) 53%, rgba(244,242,238,0) 100%);
-      pointer-events: none;
+    .hero-model {
+      right: 104px;
+      top: -18px;
+      width: 500px;
+      height: 746px;
+      z-index: 12;
     }
-
-    .polaroid {
+    .white-cross {
+      left: 570px;
+      top: 492px;
+      width: 336px;
+      height: 560px;
+      z-index: 14;
+      transform: rotate(3deg);
+    }
+    .red-seat {
+      left: 138px;
+      top: 1184px;
+      width: 380px;
+      height: 560px;
+      z-index: 12;
+      transform: rotate(-4deg);
+    }
+    .black-mini {
+      right: 58px;
+      top: 1396px;
+      width: 270px;
+      height: 390px;
+      z-index: 13;
+      transform: rotate(4deg);
+    }
+    .tag {
       position: absolute;
-      z-index: 10;
-      padding: 10px 10px 42px;
+      z-index: 24;
+      padding: 9px 18px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.72);
+      border: 2px dashed rgba(94,42,53,.38);
+      color: var(--primary);
+      font-size: 21px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+    .tag.hero { left: 488px; top: 458px; transform: rotate(-5deg); }
+    .tag.detail { right: 324px; top: 682px; background: rgba(94,42,53,.82); color: #fff; border: 0; transform: rotate(4deg); }
+    .tag.fabric { left: 506px; top: 1564px; transform: rotate(-5deg); }
+    .arrow {
+      position: absolute;
+      z-index: 24;
+      width: 240px;
+      height: 120px;
+      fill: none;
+      stroke: rgba(94,42,53,.52);
+      stroke-width: 4;
+      stroke-linecap: round;
+      stroke-dasharray: 9 10;
+    }
+    .arrow.one { left: 500px; top: 322px; transform: rotate(8deg); }
+    .arrow.two { left: 454px; top: 920px; transform: rotate(-12deg); }
+    .arrow.three { left: 518px; top: 1420px; transform: rotate(8deg); }
+    .card {
+      position: absolute;
+      z-index: 18;
+      padding: 10px 10px 44px;
       background: #fff;
-      border-radius: 6px;
-      box-shadow: 0 14px 32px rgba(72,52,38,.20);
+      border-radius: 7px;
+      box-shadow: 0 15px 34px rgba(72,52,38,.17);
       overflow: hidden;
     }
-
-    .polaroid img {
+    .card img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      object-position: center top;
       display: block;
     }
-
-    .polaroid span {
+    .card span {
       position: absolute;
       left: 0;
       right: 0;
-      bottom: 10px;
+      bottom: 11px;
       color: var(--primary);
       text-align: center;
       font-family: Georgia, "Times New Roman", serif;
@@ -180,313 +244,54 @@
       letter-spacing: 2px;
       text-transform: uppercase;
     }
-
-    .p-wine-hero { right: 348px; top: 382px; width: 238px; height: 292px; transform: rotate(-5deg); }
-    .p-white-hero { right: 158px; top: 446px; width: 210px; height: 280px; transform: rotate(4deg); }
-    .p-brown-hero { right: 28px; top: 86px; width: 178px; height: 248px; transform: rotate(5deg); }
-
-    .hash {
+    .c-neck { right: 430px; top: 332px; width: 266px; height: 258px; transform: rotate(-5deg); }
+    .c-rib { right: 686px; top: 768px; width: 270px; height: 296px; transform: rotate(4deg); }
+    .c-button { right: 340px; top: 810px; width: 315px; height: 280px; transform: rotate(-2deg); }
+    .c-sleeve { right: 70px; top: 832px; width: 250px; height: 276px; transform: rotate(5deg); }
+    .c-fabric { right: 410px; top: 1294px; width: 520px; height: 390px; transform: rotate(3deg); }
+    .detail-heading {
       position: absolute;
-      z-index: 14;
-      padding: 9px 18px;
-      border-radius: 999px;
-      background: rgba(255,255,255,.64);
-      border: 2px dashed rgba(94,42,53,.36);
-      color: var(--primary);
-      font-size: 22px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      transform: rotate(-5deg);
+      left: 336px;
+      top: 712px;
+      width: 460px;
+      z-index: 20;
+      font-size: 56px;
+      line-height: .98;
     }
-
-    .hash.hero { left: 512px; top: 482px; }
-    .hash.detail { right: 322px; top: 704px; color: #fff; background: rgba(94,42,53,.82); border: 0; transform: rotate(5deg); }
-
-    .band-copy {
+    .detail-note {
       position: absolute;
-      top: 626px;
-      left: 0;
-      right: 0;
-      z-index: 7;
-      display: flex;
-      justify-content: center;
-      gap: 94px;
-      color: #fff;
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 22px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-    }
-
-    .model-cross {
-      position: absolute;
-      left: -30px;
+      right: 72px;
       top: 662px;
-      width: 284px;
-      height: 470px;
-      z-index: 6;
-      border: 10px solid rgba(255,255,255,.9);
-      background: #fff;
-      border-radius: 6px;
-      overflow: hidden;
-      transform: rotate(-3deg);
-      box-shadow: 0 16px 34px rgba(72,52,38,.18);
+      z-index: 20;
+      width: 350px;
+      color: var(--muted);
+      font-size: 22px;
+      line-height: 1.25;
+      text-align: right;
     }
-
-    .model-cross img,
-    .side-model img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center top;
-      display: block;
-    }
-
-    .detail-title {
-      position: absolute;
-      left: 300px;
-      top: 686px;
-      z-index: 9;
-      font-size: 58px;
-      line-height: 1;
-    }
-
-    .detail-script {
-      position: absolute;
-      left: 242px;
-      top: 638px;
-      z-index: 10;
-      color: var(--accent);
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 54px;
-      font-style: italic;
-      transform: rotate(-5deg);
-    }
-
-    .detail-grid {
-      position: absolute;
-      left: 280px;
-      top: 790px;
-      width: 1020px;
-      height: 330px;
-      z-index: 8;
-      display: grid;
-      grid-template-columns: 1.1fr .92fr .98fr .92fr;
-      gap: 18px;
-    }
-
-    .tile {
-      position: relative;
-      overflow: hidden;
-      border: 10px solid rgba(255,255,255,.88);
-      border-radius: 7px;
-      background: #fff;
-      box-shadow: 0 15px 34px rgba(72,52,38,.13);
-    }
-
-    .tile:nth-child(2) { transform: translateY(18px); }
-    .tile:nth-child(3) { transform: translateY(-8px); }
-    .tile:nth-child(4) { transform: translateY(16px); }
-
-    .tile img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-      filter: saturate(.96) contrast(1.02);
-    }
-
-    .neck img { object-position: 0% 48%; transform: scale(1.68); }
-    .button img { object-position: 58% 54%; transform: scale(1.1); }
-    .rib img { object-position: 100% 8%; transform: scale(1.72); }
-    .sleeve img { object-position: 54% 100%; transform: scale(2.05); }
-
-    .label {
-      position: absolute;
-      left: 16px;
-      right: 16px;
-      bottom: 14px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 9px;
-      min-height: 40px;
-      border-radius: 999px;
-      background: rgba(255,255,255,.84);
-      color: var(--primary);
-      font-size: 19px;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-    }
-
-    .label::before {
-      content: "";
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: var(--accent);
-    }
-
-    .button .label { top: 16px; bottom: auto; }
-
-    .side-model {
-      position: absolute;
-      right: -24px;
-      top: 778px;
-      width: 190px;
-      height: 334px;
-      z-index: 6;
-      border: 9px solid rgba(255,255,255,.9);
-      border-radius: 6px;
-      background: #fff;
-      overflow: hidden;
-      transform: rotate(4deg);
-      box-shadow: 0 16px 34px rgba(72,52,38,.16);
-    }
-
-    .fabric-title {
+    .fabric-heading {
       position: absolute;
       left: 72px;
-      top: 1322px;
-      z-index: 9;
-      font-size: 68px;
+      top: 1286px;
+      width: 460px;
+      z-index: 20;
+      font-size: 60px;
       line-height: .96;
     }
-
-    .fabric-script {
-      position: absolute;
-      left: 72px;
-      top: 1264px;
-      z-index: 10;
-      color: var(--accent);
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 54px;
-      font-style: italic;
-    }
-
-    .fabric-copy {
-      position: absolute;
-      left: 72px;
-      top: 1534px;
-      width: 420px;
-      z-index: 9;
-      color: var(--muted);
-      font-size: 25px;
-      line-height: 1.28;
-    }
-
-    .fabric-bg {
-      position: absolute;
-      inset: 1180px 0 0 0;
-      z-index: 1;
-      opacity: .24;
-    }
-
-    .fabric-bg img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: 66% center;
-    }
-
-    .fabric-main {
-      position: absolute;
-      right: 28px;
-      top: 1270px;
-      width: 690px;
-      height: 474px;
-      z-index: 5;
-      border: 12px solid rgba(255,255,255,.9);
-      border-radius: 7px;
-      overflow: hidden;
-      transform: rotate(2deg);
-      box-shadow: 0 18px 42px rgba(72,52,38,.17);
-    }
-
-    .fabric-main img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: 62% 50%;
-      display: block;
-    }
-
-    .fabric-sticker {
-      position: absolute;
-      left: 430px;
-      top: 1326px;
-      width: 292px;
-      height: 360px;
-      z-index: 6;
-      padding: 9px;
-      background: #fff;
-      border-radius: 7px;
-      box-shadow: 0 16px 34px rgba(72,52,38,.15);
-      transform: rotate(-5deg);
-      overflow: hidden;
-    }
-
-    .fabric-sticker img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: 27% 48%;
-      transform: scale(1.75);
-      display: block;
-    }
-
-    .mini-model {
-      position: absolute;
-      z-index: 7;
-      width: 176px;
-      height: 244px;
-      border: 8px solid rgba(255,255,255,.9);
-      border-radius: 7px;
-      background: #fff;
-      overflow: hidden;
-      box-shadow: 0 12px 28px rgba(72,52,38,.16);
-    }
-
-    .mini-model img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center top;
-      display: block;
-    }
-
-    .mini-white { left: 334px; top: 1228px; transform: rotate(5deg); }
-
-    .touch {
-      position: absolute;
-      right: 384px;
-      top: 1388px;
-      z-index: 8;
-      color: rgba(176,141,110,.92);
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 82px;
-      font-style: italic;
-      transform: rotate(-10deg);
-      text-shadow: 0 2px 0 rgba(255,255,255,.72);
-    }
-
-    .mini-black { left: 506px; top: 1480px; transform: rotate(-4deg); }
-
     .proofs {
       position: absolute;
-      left: 72px;
-      bottom: 44px;
-      z-index: 9;
+      left: 74px;
+      top: 1668px;
+      z-index: 23;
       display: flex;
       gap: 16px;
     }
-
     .proof {
-      min-width: 132px;
-      padding: 11px 16px;
+      min-width: 142px;
+      padding: 12px 17px;
       border-radius: 999px;
       color: var(--primary);
-      background: rgba(255,255,255,.76);
+      background: rgba(255,255,255,.82);
       border: 1px solid rgba(94,42,53,.20);
       font-size: 18px;
       text-align: center;
@@ -495,64 +300,44 @@
 </head>
 <body>
   <main class="canvas" aria-label="ELARAISE continuous modules 01 to 03">
-    <div class="watermark wm-hero">ELARAISE</div>
-    <div class="watermark wm-detail">DETAILS</div>
-    <div class="watermark wm-fabric">RIBBED</div>
-    <div class="soft-band"></div>
-    <div class="soft-band bottom"></div>
+    <div class="bg" aria-hidden="true">
+      <img class="street" src="../assets/gen/gen-bg-warm-01.png" alt="">
+      <img class="interior" src="../assets/gen/gen-bg-warm-02.png" alt="">
+    </div>
+    <div class="wash"></div>
+    <div class="band one"></div>
+    <div class="band two"></div>
+    <div class="wm one">ELARAISE</div>
+    <div class="wm two">DETAIL</div>
+    <div class="wm three">TEXTURE</div>
     <img class="logo" src="../assets/logo.svg" alt="ELARAISE">
 
-    <section class="hero-photo" aria-label="Hero lifestyle photo">
-      <img src="../assets/hero-01.png" alt="Woman wearing wine ELARAISE Henley top">
-    </section>
-    <div class="fade-left"></div>
-    <h1 class="hero-title">ELEVATED HENLEY ESSENTIAL</h1>
-    <div class="hero-script">Effortless</div>
-    <p class="hero-copy">A soft ribbed long sleeve top with a notched V neckline, slim shape, and easy styling for cooler days.</p>
-    <div class="hash hero">#OOTD</div>
-    <aside class="polaroid p-wine-hero">
-      <img src="../assets/color-wine.jpg" alt="Wine Henley crop">
-      <span>Wine</span>
-    </aside>
-    <aside class="polaroid p-white-hero">
-      <img src="../assets/color-white.jpg" alt="White Henley crop">
-      <span>White</span>
-    </aside>
-    <aside class="polaroid p-brown-hero">
-      <img src="../assets/color-brown.jpg" alt="Brown Henley crop">
-      <span>Brown</span>
-    </aside>
-    <div class="band-copy"><span>Soft Ribbed Knit</span><span>Two-Button Henley</span><span>Easy Layering Fit</span></div>
+    <h1 class="serif-hero">Elevated Henley Essential</h1>
+    <div class="script-title hero">Henley<br>Mood</div>
+    <p class="copy hero">A ribbed long sleeve top with a notched V neckline, two-button detail, and an easy slim fit.</p>
+    <div class="tag hero">#OOTD</div>
+    <svg class="arrow one" viewBox="0 0 240 120" aria-hidden="true"><path d="M12 78 C70 18 122 18 170 58 C190 74 208 72 222 50"/><path d="M214 50 l18 0 l-8 16"/></svg>
+    <section class="cutout hero-model"><img src="../assets/gen/gen-model-wine-01.png" alt="Wine Henley cutout model"></section>
+    <section class="card c-neck"><img src="../assets/gen/gen-detail-wine-01.png" alt="Henley neckline and buttons"><span>Two-Button Henley</span></section>
 
-    <aside class="model-cross">
-      <img src="../assets/color-wine.jpg" alt="Wine Henley worn crop crossing module boundary">
-    </aside>
-    <div class="detail-script">Refined</div>
-    <h2 class="detail-title">NOTICE THE DETAILS</h2>
-    <div class="hash detail">#DETAILS</div>
-    <aside class="side-model">
-      <img src="../assets/color-white.jpg" alt="White Henley worn crop">
-    </aside>
-    <section class="detail-grid" aria-label="Product details">
-      <article class="tile neck"><img src="../assets/detail-02.png" alt="Notched V neck detail"><div class="label">Notched V Neck</div></article>
-      <article class="tile button"><img src="../assets/detail-02-buttons.png" alt="Decorative two-button detail"><div class="label">Decorative Buttons</div></article>
-      <article class="tile rib"><img src="../assets/detail-02.png" alt="Ribbed knit texture"><div class="label">Ribbed Knit</div></article>
-      <article class="tile sleeve"><img src="../assets/detail-02.png" alt="Long sleeve cuff detail"><div class="label">Long Sleeves</div></article>
-    </section>
+    <section class="cutout white-cross"><img src="../assets/gen/gen-model-white-01.png" alt="White Henley walking cutout model"></section>
+    <div class="script-title detail">Detail<br>Proof</div>
+    <h2 class="detail-heading">Notice the Details</h2>
+    <p class="detail-note">Close-up proof for the split neckline, marble-look buttons, ribbed knit, and long sleeve cuff.</p>
+    <div class="tag detail">#DETAILS</div>
+    <svg class="arrow two" viewBox="0 0 240 120" aria-hidden="true"><path d="M12 82 C64 30 132 28 156 70 C174 98 204 92 226 52"/><path d="M216 49 l17 5 l-12 13"/></svg>
+    <section class="card c-rib"><img src="../assets/gen/gen-detail-wine-02.png" alt="Ribbed knit macro"><span>Ribbed Knit</span></section>
+    <section class="card c-button"><img src="../assets/gen/gen-detail-wine-01.png" alt="Two button macro"><span>Notched V Neck</span></section>
+    <section class="card c-sleeve"><img src="../assets/gen/gen-detail-wine-03.png" alt="Long sleeve cuff macro"><span>Long Sleeves</span></section>
 
-    <div class="fabric-bg" aria-hidden="true"><img src="../assets/fabric-03.png" alt=""></div>
-    <div class="fabric-script">Soft</div>
-    <h2 class="fabric-title">SOFT STRETCH FEEL</h2>
-    <p class="fabric-copy">Smooth ribbed knit moves with you and keeps a lightweight feel for solo wear or layering.</p>
-    <div class="touch">touch</div>
-    <section class="fabric-main" aria-label="Ribbed knit macro">
-      <img src="../assets/fabric-03.png" alt="Wine and white ribbed fabric texture">
-    </section>
-    <section class="fabric-sticker" aria-label="Henley neckline fabric crop">
-      <img src="../assets/fabric-03.png" alt="Wine Henley neckline and button detail">
-    </section>
-    <aside class="mini-model mini-white"><img src="../assets/color-white.jpg" alt="White Henley worn crop"></aside>
-    <aside class="mini-model mini-black"><img src="../assets/color-black.jpg" alt="Black Henley worn crop"></aside>
+    <section class="cutout red-seat"><img src="../assets/gen/gen-model-red-01.png" alt="Red Henley seated cutout model"></section>
+    <h2 class="fabric-heading">Soft Stretch Feel</h2>
+    <div class="script-title fabric">Soft<br>Touch</div>
+    <p class="copy fabric">Smooth ribbed knit moves with you and keeps a lightweight feel for solo wear or layering.</p>
+    <svg class="arrow three" viewBox="0 0 240 120" aria-hidden="true"><path d="M18 88 C82 28 142 24 164 70 C178 98 204 96 224 58"/><path d="M214 54 l18 3 l-10 14"/></svg>
+    <section class="card c-fabric"><img src="../assets/gen/gen-detail-wine-02.png" alt="Soft ribbed fabric macro"><span>Fabric Display</span></section>
+    <section class="cutout black-mini"><img src="../assets/gen/gen-model-black-01.png" alt="Black Henley cutout model"></section>
+    <div class="tag fabric">#SOFT RIB</div>
     <section class="proofs" aria-label="Fabric attributes">
       <div class="proof">95% Viscose</div>
       <div class="proof">5% Spandex</div>

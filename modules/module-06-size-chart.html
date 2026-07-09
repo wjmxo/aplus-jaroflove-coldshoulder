@@ -11,6 +11,8 @@
       --brand-bg: #F4F2EE;
       --brand-card: #FFFFFF;
       --brand-warm: #EAE5DE;
+      --stripe-pink: #F3E2E1;
+      --stripe-camel: #EFE4D6;
       --brand-text: #1F1B1A;
       --brand-muted: #7C7369;
       --line: rgba(94, 42, 53, .20);
@@ -33,7 +35,8 @@
       height: 600px;
       padding: 42px 58px 38px;
       background:
-        radial-gradient(circle at 10% 10%, rgba(255,255,255,.78), transparent 26%),
+        linear-gradient(90deg, rgba(244,242,238,.96) 0 64%, rgba(244,242,238,.58) 100%),
+        url("../assets/gen/gen-bg-warm-02.png") right center / 720px 600px no-repeat,
         linear-gradient(135deg, #F4F2EE 0%, #EFE8DD 100%);
     }
 
@@ -118,6 +121,9 @@
       background: rgba(255, 255, 255, .42);
     }
 
+    tbody tr:nth-child(odd) { background: var(--stripe-pink); }
+    tbody tr:nth-child(even) { background: var(--stripe-camel); }
+
     td:first-child, th:first-child {
       width: 58px;
       color: var(--brand-primary);
@@ -132,34 +138,100 @@
     .body-table th { font-size: 17px; }
 
     .guide {
-      padding: 18px 20px;
+      position: relative;
+      padding: 0;
       display: flex;
       flex-direction: column;
       gap: 16px;
+      overflow: hidden;
     }
 
     .diagram {
-      height: 178px;
+      height: 318px;
       position: relative;
-      border: 1px dashed rgba(94, 42, 53, .28);
-      border-radius: 6px;
-      background: linear-gradient(135deg, #E7E2DB, #D7D1C9);
-      display: grid;
-      place-items: center;
+      border: 0;
+      border-radius: 0;
+      background: linear-gradient(135deg, rgba(233,215,212,.80), rgba(201,185,163,.70));
+      overflow: hidden;
     }
 
-    .placeholder-label {
-      color: var(--brand-primary);
-      font-size: 34px;
+    .diagram img {
+      position: absolute;
+      right: 14px;
+      bottom: -44px;
+      width: 234px;
+      height: 390px;
+      object-fit: contain;
+      filter:
+        drop-shadow(8px 0 0 #fff)
+        drop-shadow(-8px 0 0 #fff)
+        drop-shadow(0 8px 0 #fff)
+        drop-shadow(0 -8px 0 #fff)
+        drop-shadow(0 18px 22px rgba(72,52,38,.22));
+    }
+
+    .measure-line {
+      position: absolute;
+      z-index: 3;
+      color: #fff;
+      font-size: 15px;
       font-weight: 700;
-      text-align: center;
-      letter-spacing: 4px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      text-shadow: 0 1px 3px rgba(94,42,53,.32);
+    }
+
+    .measure-line::before {
+      content: "";
+      position: absolute;
+      border-color: #fff;
+      border-style: dashed;
+      filter: drop-shadow(0 1px 3px rgba(94,42,53,.30));
+    }
+
+    .bust {
+      left: 42px;
+      top: 104px;
+    }
+
+    .bust::before {
+      left: 54px;
+      top: 9px;
+      width: 152px;
+      border-top-width: 3px;
+    }
+
+    .length {
+      right: 18px;
+      top: 86px;
+      writing-mode: vertical-rl;
+    }
+
+    .length::before {
+      right: 56px;
+      top: -18px;
+      height: 214px;
+      border-left-width: 3px;
+    }
+
+    .sleeve {
+      left: 26px;
+      top: 206px;
+    }
+
+    .sleeve::before {
+      left: 64px;
+      top: -34px;
+      width: 128px;
+      border-top-width: 3px;
+      transform: rotate(-24deg);
+      transform-origin: left center;
     }
 
     .sliders {
       display: grid;
       gap: 12px;
-      padding: 2px 2px 0;
+      padding: 18px 20px 0;
     }
 
     .slider-row {
@@ -263,8 +335,11 @@
       </article>
 
       <article class="card guide">
-        <div class="diagram" aria-label="Bust and length guide">
-          <div class="placeholder-label">待素材</div>
+        <div class="diagram" aria-label="Bust, length and sleeve guide">
+          <img src="../assets/gen/gen-model-white-01.png" alt="White Henley model measurement guide">
+          <span class="measure-line bust">Bust</span>
+          <span class="measure-line length">Length</span>
+          <span class="measure-line sleeve">Sleeve</span>
         </div>
 
         <div class="sliders">

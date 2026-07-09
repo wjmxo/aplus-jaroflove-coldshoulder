@@ -9,6 +9,8 @@ All image files are exported at 2x resolution for clarity. Upload them to matchi
 
 Modules 01-03 are designed as one continuous 1464 x 1800 canvas and sliced into three 1464 x 600 modules. Modules 04-05 are designed as one continuous 1464 x 1200 canvas and sliced into two 1464 x 600 modules. Use `render.cjs` or `render-continuous.cjs`, then run `scripts/slice_continuous.py`, `scripts/visual_compare.py`, and `scripts/make_contact_sheet.py`.
 
+Current artwork uses generated assets from `assets/gen/`; `assets/color-*.jpg` remains as garment-fidelity reference only and is not directly placed in the final module images.
+
 | File | Backend module | Intended size | Main message |
 |---|---|---:|---|
 | `output/module-01-hero.png` | Premium Full Image | 1464 x 600 | Brand hero and Henley first impression |
