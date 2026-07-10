@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" viewBox="0 0 1200 300">
-  <rect width="1200" height="300" fill="none"/>
-  <text x="600" y="165" text-anchor="middle" font-family="Playfair Display, Georgia, 'Times New Roman', serif"
-        font-size="96" font-weight="500" letter-spacing="22" fill="#5E2A35">ELARAISE</text>
-  <line x1="380" y1="215" x2="820" y2="215" stroke="#B08D6E" stroke-width="2"/>
-  <text x="600" y="252" text-anchor="middle" font-family="Georgia, serif"
-        font-size="26" letter-spacing="10" fill="#8A8378">EFFORTLESS ESSENTIALS</text>
-</svg>
