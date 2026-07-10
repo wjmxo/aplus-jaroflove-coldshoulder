@@ -1,38 +1,42 @@
-# ELARAISE Premium A+ Upload Guide
+# Jar of Love Premium A+ Upload Guide
 
-Product: Women's Long Sleeve Henley V Neck Slim Fit Ribbed Top  
-ASIN focus: B0H1X6VPMM
+Product: Women's Short Sleeve Cold Shoulder Tunic Top
+ASIN focus: B0FXX1TWYB / Parent B0FXX212VC
+
+## Output Contract
+
+- Design canvas:1464 × 600 per module
+- Exported PNG:2928 × 1200 (2×)
+- Source of truth:`modules/*.html`
+- Modules are independent; no continuous-canvas slicing is used in this version.
 
 ## Output Files
 
-All image files are exported at 2x resolution for clarity. Upload them to matching Premium A+ modules as image assets.
-
-Modules 01-03 are designed as one continuous 1464 x 1800 canvas and sliced into three 1464 x 600 modules. Modules 04-05 are designed as one continuous 1464 x 1200 canvas and sliced into two 1464 x 600 modules. Use `render.cjs` or `render-continuous.cjs`, then run `scripts/slice_continuous.py`, `scripts/visual_compare.py`, and `scripts/make_contact_sheet.py`.
-
-Current artwork uses generated assets from `assets/gen/`; `assets/color-*.jpg` remains as garment-fidelity reference only and is not directly placed in the final module images.
-
-| File | Backend module | Intended size | Main message |
-|---|---|---:|---|
-| `output/module-01-hero.png` | Premium Full Image | 1464 x 600 | Brand hero and Henley first impression |
-| `output/module-02-detail-grid.png` | Premium Four Images & Text or Background Image with Text | 1464 x 600 | Notched V neck, decorative buttons, ribbed knit, long sleeves |
-| `output/module-03-fabric.png` | Premium Background Image with Text | 1464 x 600 | 95% viscose + 5% spandex soft stretch feel |
-| `output/module-04-scenarios.png` | Premium Background Image with Text | 1464 x 600 | Work, daily, shopping, and date styling |
-| `output/module-05-styling-color.png` | Premium Background Image with Text or Navigation Carousel panel | 1464 x 600 | Styling options and five color choices |
-| `output/module-06-size-chart.png` | Premium Technical Specifications plus supporting image | 1464 x 600 | Size chart, fit type, stretch, thickness |
-| `output/module-07-brand-story.png` | Premium Background Image with Text | 1464 x 600 | Brand story and five color display |
+| File | Backend module | Status | Main message |
+|---|---|---|---|
+| `output/module-01-hero.png` | Premium Full Image | Ready | Multi-print hero and cold-shoulder first impression |
+| `output/module-02-detail-grid.png` | Premium Four Images & Text | Ready | Scoop neck, crossed straps and flowy sleeve |
+| `output/module-03-fabric.png` | Premium Background Image with Text | Ready | Soft drape and high-low hem proof |
+| `output/module-04-scenarios.png` | Premium Background Image with Text | Ready | Six colors/prints across six occasions |
+| `output/module-05-styling-color.png` | Premium Background Image with Text | Ready | Three print-specific styling directions |
+| `output/module-06-size-chart.png` | Premium Technical Specifications | **HOLD** | Measurement-position guide; exact size values still required |
+| `output/module-07-brand-story.png` | Premium Background Image with Text | Ready | Four core prints shown in two views each |
 
 ## Backend Text Fields
 
-Use the approved copy in `copy.md`. Keep wording focused on verified attributes:
+Use the approved U.S. English wording in `copy.md`. Do not add price, discount, ranking, review quotations, competitor names, guarantees or absolute claims.
 
-- Use `Decorative Buttons` wherever the Henley close-up appears.
-- Do not mention price, discount, ranking, reviews, or comparison to another brand.
-- Do not claim non-sheer, double-lined, or opaque unless confirmed by real product photography.
-- Fit guidance may say: `For a more relaxed look, consider choosing one size up.`
+## Module 06 Hold / Replenishment Request
 
-## Final Checks Before Upload
+- Missing input:Seller Central S–XXL size chart with BUST / LENGTH / SLEEVE values
+- Intended module:06 Size
+- Required source:current parent variation attributes or backend size-chart screenshot
+- Reason:exact garment measurements cannot be inferred safely from imagery
+- Current PNG may be used only as a visual draft, not as the final technical size module.
 
-- Confirm Module 06 size data matches Seller Central variation attributes.
-- Replace the Module 06 `待素材` placeholder with a real measurement-guide photo if available.
-- Check every backend image crop after upload; Amazon may preview modules differently from local PNGs.
-- Keep all uploaded text in U.S. English and avoid promotional or absolute claims.
+## Final Upload Checks
+
+- Confirm Module 06 values against Seller Central before release.
+- Confirm Jar of Love wordmark/brand VI authorization before replacing the text-only brand treatment.
+- Preview each image in Seller Central and verify Amazon's crop behavior.
+- Preserve module order 01–07.

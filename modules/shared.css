@@ -1,0 +1,25 @@
+:root {
+  --cream: #f5f1eb;
+  --paper: #fffdfa;
+  --ink: #211d1b;
+  --muted: #6e655f;
+  --wine: #6f263f;
+  --rose: #cfa7a0;
+  --camel: #bba58d;
+  --line: rgba(71, 57, 49, .18);
+}
+* { box-sizing: border-box; }
+html, body { width: 1464px; height: 600px; margin: 0; overflow: hidden; }
+body { background: var(--cream); color: var(--ink); font-family: Arial, Helvetica, sans-serif; }
+.module { position: relative; width: 1464px; height: 600px; overflow: hidden; background: var(--cream); }
+.brand { position: absolute; z-index: 20; left: 62px; top: 38px; font-size: 21px; font-weight: 700; letter-spacing: 6px; color: var(--wine); }
+.eyebrow { font-size: 18px; font-weight: 700; letter-spacing: 5px; color: var(--wine); text-transform: uppercase; }
+h1 { margin: 0; font: 500 58px/.95 Georgia, 'Times New Roman', serif; letter-spacing: 1px; text-transform: uppercase; }
+.lead { margin: 0; color: var(--muted); font-size: 23px; line-height: 1.35; }
+.pill { display: inline-block; padding: 9px 18px; border-radius: 99px; background: var(--wine); color: white; font-size: 16px; font-weight: 700; letter-spacing: 2px; }
+.card { position: absolute; overflow: hidden; background: white; border: 8px solid white; box-shadow: 0 16px 30px rgba(65, 47, 37, .17); }
+.card img { width: 100%; height: 100%; display: block; object-fit: cover; }
+.label { position: absolute; z-index: 10; padding: 8px 14px; background: rgba(255,255,255,.9); color: var(--wine); font-size: 16px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; }
+.watermark { position: absolute; color: rgba(111,38,63,.07); font: 700 142px/1 Georgia, serif; letter-spacing: 10px; text-transform: uppercase; white-space: nowrap; }
+.rule { height: 3px; width: 86px; background: var(--rose); margin: 20px 0; }
+.footer-note { position: absolute; left: 62px; bottom: 30px; font-size: 14px; letter-spacing: 2px; color: var(--muted); text-transform: uppercase; }
