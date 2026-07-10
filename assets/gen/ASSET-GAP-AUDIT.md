@@ -57,3 +57,13 @@
 - 前两张自由生成夜景仍保留 Draft 作为失败对照,不得用于页面。
 - 页面制作阶段使用现有 Ready 的 blackmarble 实拍作为该印花出镜素材,不再补夜景图。
 - 验收材料:`asset-contact-sheet-jaroflove.jpg`。
+
+## 多人印花素材补充批次 01
+
+- 新增 Approved:4 张。
+- 人数结构:四人同框 1 张、三人同框 2 张、双人同框 1 张。
+- 场景:海边度假露台、海边栈道、居家咖啡、城市逛街。
+- 搭配覆盖:白短裤、浅色牛仔、米色长裤、黑裙、黑裤、白牛仔、牛仔裙及不同包鞋组合。
+- 印花覆盖:indigobark / blackmarble / greyfloral / charcoalblush。
+- 视线与表情:看镜头、望向画外、低头专注、回看;浅笑、露齿笑、平静无笑意均有覆盖。
+- 专用验收拼图:`group-print-contact-sheet-01.jpg`。
