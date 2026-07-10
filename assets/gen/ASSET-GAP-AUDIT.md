@@ -50,10 +50,10 @@
 
 ## 本轮生产结果
 
-- Approved 生成/合成素材:13 张。
+- Approved 生成素材:12 张。
 - Draft 生成素材:3 张,均已在 `INDEX.md` 标明不可用于页面。
 - 已完成:黑色背面、黑色通勤、酒红约会、indigobark 海边、charcoalblush 居家咖啡、greyfloral 第二景别、垂坠演示、高低摆侧面、黑色七分身尺码底图、3 组差异化搭配。
-- `blackmarble × 夜晚小聚` 已通过精确合成补齐:`gen-scene-blackmarble-night-composite-01.png` 直接锁定原实拍人物与服装像素,只替换夜晚背景,印花走向、图案比例、分布和配色均与实拍完全一致。
+- 用户已拒绝 `blackmarble × 夜晚小聚` 精确合成图,该图已从素材库删除且不得用于页面。
 - 前两张自由生成夜景仍保留 Draft 作为失败对照,不得用于页面。
-- 花色 × 场景矩阵现已全部 Ready。
+- 页面制作阶段使用现有 Ready 的 blackmarble 实拍作为该印花出镜素材,不再补夜景图。
 - 验收材料:`asset-contact-sheet-jaroflove.jpg`。

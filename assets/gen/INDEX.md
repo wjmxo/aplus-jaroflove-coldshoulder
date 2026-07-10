@@ -9,7 +9,6 @@
 | `gen-scene-wine-date-02.png` | Scene | wine | date | full body | 04/07 | `../color-wine-full-indoor-01.jpg`; `../color-wine-side-01.jpg` | 看镜头 | 浅笑不露齿 | Generated | Approved | 未塞衣摆,约会矩阵 |
 | `gen-scene-indigobark-beach-01.png` | Scene | indigobark | beach vacation | full body | 04/07 | `../print-indigobark-front-01.jpg`; `../print-indigobark-front-outdoor-01.jpg` | 望向画外左 | 露齿笑 | Generated | Approved | 海边矩阵;纹样方向与蓝黑配色通过 |
 | `gen-scene-charcoalblush-home-coffee-01.png` | Scene | charcoalblush | home coffee | three-quarter seated | 04/07 | `../print-charcoalblush-front-01.jpg`; `../print-charcoalblush-back-01.jpg` | 低头看杯子 | 平静松弛 | Generated | Approved | 居家咖啡矩阵;灰粉渐变通过 |
-| `gen-scene-blackmarble-night-composite-01.png` | Scene | blackmarble | night gathering | waist-up | 04/07 | `../print-blackmarble-front-01.jpg` | 裁切不显示完整眼部 | 平静 | Real-photo composite | Approved | 原实拍人物与服装像素锁定,仅替换夜晚背景;印花完全保真 |
 | `gen-portrait-greyfloral-street-01.png` | Portrait | greyfloral | street close-up | waist-up | 07 | `../print-greyfloral-front-01.jpg`; `../print-greyfloral-front-02.jpg` | 低头看袖口 | 专注神态 | Generated | Approved | 与实拍街拍为不同景别 |
 | `gen-detail-black-drape-01.png` | Detail/Fit | black | drape proof | waist-up | 03 | `../color-black-front-01.jpg`; `../color-black-detail-strap-01.jpg` | 低头看衣角 | 专注神态 | Generated | Approved | 自然垂坠,未作夸张弹力声明 |
 | `gen-model-black-side-highlow-01.png` | Model/Fit | black | side high-low hem | three-quarter | 03 | `../color-black-front-01.jpg`; `../color-wine-side-01.jpg` | 望向画外左 | 平静松弛 | Generated | Approved | 前短后长轮廓清楚 |
@@ -55,7 +54,7 @@
 | 01 Hero | 黑色正面锚点 + 至少一款印花配角 | Ready |
 | 02 Detail | 黑色领口、黑色肩带、charcoalblush 肩带 | Ready |
 | 03 Fabric/Fit | 垂坠演示 + 高低摆侧面 | Ready |
-| 04 Scenes | 六款花色专属场景矩阵 | Ready |
+| 04 Scenes | 黑色/酒红/indigobark/greyfloral/charcoalblush 专属场景 + blackmarble 实拍 | Ready for page production; rejected composite excluded |
 | 05 Styling | 三组差异化搭配组合 | Ready |
 | 06 Size | 黑色七分身标注底图 | Ready |
 | 07 Print Gallery | 四印花各至少两次且不同景别 | Ready |
