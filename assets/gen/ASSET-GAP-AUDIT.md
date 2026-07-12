@@ -67,3 +67,13 @@
 - 印花覆盖:indigobark / blackmarble / greyfloral / charcoalblush。
 - 视线与表情:看镜头、望向画外、低头专注、回看;浅笑、露齿笑、平静无笑意均有覆盖。
 - 专用验收拼图:`group-print-contact-sheet-01.jpg`。
+
+## 多人印花素材补充批次 02
+
+- 新增 Approved:4 张,全部限定为 2–3 位不同模特。
+- 人数结构:三人同框 2 张、双人同框 2 张。
+- 场景:屋顶早午餐、艺术画廊、花园小聚、酒店旅行。
+- 模特差异:覆盖不同肤色、脸型、发色、卷发/短发/辫发及不同体型。
+- 搭配扩展:浅蓝长裙、米色阔腿裤、白短裤、黑阔腿裤、米色百褶裙、白长裙、鼠尾草短裤、亚麻裤及旅行休闲裤。
+- 印花覆盖:indigobark / blackmarble / greyfloral / charcoalblush。
+- 专用验收拼图:`group-print-contact-sheet-02.jpg`。
