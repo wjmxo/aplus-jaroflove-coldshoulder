@@ -127,3 +127,14 @@
 - 场景:美国商业街、住宅露台、咖啡露台、海滨度假阳台。
 - 印花:greyfloral / charcoalblush / indigobark;每张均使用对应实拍参考。
 - 专用验收拼图:`group-print-contact-sheet-04-v4.jpg`。
+
+## 双花型街拍素材批次 05 — 用户指定参考图
+
+- 新增 Approved:4 张,仅使用用户指定的 charcoalblush 与 greyfloral 两款花型。
+- 模特:固定同一对欧美女性,23 岁棕发与 28 岁金发,四个场景保持身份连续。
+- 场景:购物街行走、咖啡店外散步、精品店橱窗购物、步行街咖啡休息。
+- 搭配:米色长裤、黑长裤、浅色牛仔、米色短裤、牛仔裙;所有衣摆完整放下。
+- 道具:无标识咖啡杯、低位购物袋、低位墨镜和手机,均不遮挡印花或肩部结构。
+- 质量淘汰:首张校准图因 charcoalblush 衣摆塞入裤腰被拒绝,未复制、未登记。
+- 用户参考图已复制为 `assets/source-user-charcoalblush-front-02.png` 和 `assets/source-user-greyfloral-front-03.png`。
+- 专用验收拼图:`group-print-contact-sheet-05.jpg`。
