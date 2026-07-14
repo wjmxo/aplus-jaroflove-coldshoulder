@@ -138,3 +138,13 @@
 - 质量淘汰:首张校准图因 charcoalblush 衣摆塞入裤腰被拒绝,未复制、未登记。
 - 用户参考图已复制为 `assets/source-user-charcoalblush-front-02.png` 和 `assets/source-user-greyfloral-front-03.png`。
 - 专用验收拼图:`group-print-contact-sheet-05.jpg`。
+
+## 双花型单人场景批次 06 — 日常与购物
+
+- 新增 Approved:6 张,charcoalblush 与 greyfloral 各 3 张。
+- 模特身份:沿用 V5 固定人物,charcoalblush 为 23 岁欧美棕发模特,greyfloral 为 28 岁欧美金发模特。
+- charcoalblush 场景:咖啡外带日常步行、精品店橱窗购物、街口等候过街。
+- greyfloral 场景:咖啡店外步行、精品店购物离店、周末市场采购。
+- 搭配:米色长裤、深色牛仔、黑色牛仔裙、浅色牛仔、米色牛仔裙、白短裤。
+- 道具:咖啡杯、购物袋、手机、手提袋均在腰线以下,不遮挡印花、肩带与完整衣摆。
+- 专用验收拼图:`single-print-scene-contact-sheet-06.jpg`。
